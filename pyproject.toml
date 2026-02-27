@@ -1,0 +1,24 @@
+[project]
+name = "manual-sih-rag"
+version = "1.0.0"
+description = "RAG system para consulta rápida do Manual Técnico SIH/SUS"
+requires-python = ">=3.11"
+dependencies = [
+    "pymupdf>=1.24.0",
+    "chromadb>=0.5.0",
+    "sentence-transformers>=3.0.0",
+    "rich>=13.0.0",
+    "beautifulsoup4>=4.12.0",
+    "google-genai>=1.0.0",
+    "rank-bm25>=0.2.2",
+    "mcp[cli]>=1.0.0",
+    "boto3>=1.28.0",
+    "pyarrow>=14.0.0",
+]
+
+[tool.setuptools]
+py-modules = ["consulta_manual", "extrair_manual", "indexar_manual", "validar_critica", "analisar_critica", "mapear_criticas", "agente", "busca_hibrida", "avaliar_rag", "validar_resposta", "mcp_server", "s3_client", "sigtap_client", "cnes_client"]
+
+[project.scripts]
+manual-sih = "consulta_manual:main"
+manual-sih-mcp = "mcp_server:main"

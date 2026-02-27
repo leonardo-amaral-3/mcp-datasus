@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+
+# Dados gerados (recriar com extrair_manual.py + indexar_manual.py)
+db/
+data/chunks.json
+data/bm25_index.pkl
+data/parent_child_map.json
+data/secoes.json
+data/analises/
+
+# Fontes brutas (pesadas demais para git)
+ragData/
+
+# Claude Code (config local, não do projeto)
+.claude/
+.claude-flow/
+.mcp.json
+CLAUDE.md
+
+# Secrets
+.env
+.env.local
+.env.production
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

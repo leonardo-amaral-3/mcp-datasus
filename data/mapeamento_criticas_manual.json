@@ -1,0 +1,3527 @@
+[
+  {
+    "numero": 1,
+    "codigo": "050009",
+    "nome": "Número da AIH não informado",
+    "secoes_manual": [
+      {
+        "secao": "4.5",
+        "titulo": "NUMERAÇÃO DE AIH \nN",
+        "pagina": 10,
+        "relevancia": 0.628
+      },
+      {
+        "secao": "4.4.3",
+        "titulo": "NUMERAÇÃO DE AIH \n \nN",
+        "pagina": 11,
+        "relevancia": 0.625
+      },
+      {
+        "secao": "4.5.1",
+        "titulo": "A",
+        "pagina": 10,
+        "relevancia": 0.519
+      }
+    ]
+  },
+  {
+    "numero": 2,
+    "codigo": "050018",
+    "nome": "Data da saída inválida",
+    "secoes_manual": [
+      {
+        "secao": "29",
+        "titulo": "Página 29",
+        "pagina": 29,
+        "relevancia": 0.568
+      },
+      {
+        "secao": "36",
+        "titulo": "Página 36",
+        "pagina": 36,
+        "relevancia": 0.567
+      },
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.565
+      }
+    ]
+  },
+  {
+    "numero": 3,
+    "codigo": "050019",
+    "nome": "Data da internação posterior à data da saída",
+    "secoes_manual": [
+      {
+        "secao": "29",
+        "titulo": "Página 29",
+        "pagina": 29,
+        "relevancia": 0.551
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.548
+      },
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.547
+      }
+    ]
+  },
+  {
+    "numero": 4,
+    "codigo": "050022",
+    "nome": "Data da internação anterior à data de nascimento paciente",
+    "secoes_manual": [
+      {
+        "secao": "44",
+        "titulo": "ATENÇÃO AO IDOSO E HOSPITAL DIA EM GERIATRIA\nO",
+        "pagina": 52,
+        "relevancia": 0.655
+      },
+      {
+        "secao": "33.3",
+        "titulo": "REGISTRO CIVIL DE NASCIMENTO  \nD",
+        "pagina": 43,
+        "relevancia": 0.636
+      },
+      {
+        "secao": "8.5",
+        "titulo": "INTERCORRÊNCIAS PÓS-TRANSPLANTE \nA AIH",
+        "pagina": 18,
+        "relevancia": 0.622
+      }
+    ]
+  },
+  {
+    "numero": 5,
+    "codigo": "050026",
+    "nome": "Procedimento principal inválido",
+    "secoes_manual": [
+      {
+        "secao": "36",
+        "titulo": "Página 36",
+        "pagina": 36,
+        "relevancia": 0.544
+      },
+      {
+        "secao": "65.1",
+        "titulo": "REDE DE URGÊNCIA E EMERGÊNCIA - NOTA TÉCNICA INFORMATIVA",
+        "pagina": 7,
+        "relevancia": 0.543
+      },
+      {
+        "secao": "39",
+        "titulo": "Página 39",
+        "pagina": 39,
+        "relevancia": 0.527
+      }
+    ]
+  },
+  {
+    "numero": 6,
+    "codigo": "050045",
+    "nome": "Diagnóstico principal inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.696
+      },
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.652
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.649
+      }
+    ]
+  },
+  {
+    "numero": 7,
+    "codigo": "050046",
+    "nome": "Procedimento principal incompatível com diagnóstico principal",
+    "secoes_manual": [
+      {
+        "secao": "62.1",
+        "titulo": "CID X PROCEDIMENTO  \nN",
+        "pagina": 73,
+        "relevancia": 0.689
+      },
+      {
+        "secao": "29",
+        "titulo": "FATORES DE COAGULAÇÃO\n \nQ",
+        "pagina": 47,
+        "relevancia": 0.604
+      },
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.571
+      }
+    ]
+  },
+  {
+    "numero": 8,
+    "codigo": "050050",
+    "nome": "Nome do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.654
+      },
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.62
+      },
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.619
+      }
+    ]
+  },
+  {
+    "numero": 9,
+    "codigo": "050051",
+    "nome": "Data de nascimento do paciente inválida",
+    "secoes_manual": [
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.669
+      },
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \nN",
+        "pagina": 13,
+        "relevancia": 0.655
+      },
+      {
+        "secao": "33.3",
+        "titulo": "REGISTRO CIVIL DE NASCIMENTO  \nD",
+        "pagina": 43,
+        "relevancia": 0.626
+      }
+    ]
+  },
+  {
+    "numero": 10,
+    "codigo": "050052",
+    "nome": "Sexo do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.597
+      },
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.582
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.582
+      }
+    ]
+  },
+  {
+    "numero": 11,
+    "codigo": "050057",
+    "nome": "CNS do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "58.1",
+        "titulo": "DUPLICIDADE DE NOME \n               \n \nO SIHD",
+        "pagina": 86,
+        "relevancia": 0.615
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.599
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.56
+      }
+    ]
+  },
+  {
+    "numero": 12,
+    "codigo": "050081",
+    "nome": "Diagnóstico principal incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.54
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.539
+      },
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.527
+      }
+    ]
+  },
+  {
+    "numero": 13,
+    "codigo": "050083",
+    "nome": "Procedimento principal incompatível com idade do paciente",
+    "secoes_manual": [
+      {
+        "secao": "13.2",
+        "titulo": "DIÁRIAS DE ACOMPANHANTE PARA IDOSO \nA P",
+        "pagina": 25,
+        "relevancia": 0.734
+      },
+      {
+        "secao": "63.2",
+        "titulo": "IDADE MENOR E MAIOR \nO",
+        "pagina": 73,
+        "relevancia": 0.664
+      },
+      {
+        "secao": "57.2",
+        "titulo": "IDADE MENOR OU MAIOR \n \nP",
+        "pagina": 85,
+        "relevancia": 0.659
+      }
+    ]
+  },
+  {
+    "numero": 14,
+    "codigo": "050084",
+    "nome": "Sexo do paciente incompatível com procedimento principal",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.688
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.673
+      },
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.645
+      }
+    ]
+  },
+  {
+    "numero": 15,
+    "codigo": "050097",
+    "nome": "Procedimento principal não permite permanência",
+    "secoes_manual": [
+      {
+        "secao": "57.1",
+        "titulo": "PERMANÊNCIA MENOR \n \nQ",
+        "pagina": 85,
+        "relevancia": 0.674
+      },
+      {
+        "secao": "63.1",
+        "titulo": "MÉDIA DE PERMANÊNCIA \nQ",
+        "pagina": 73,
+        "relevancia": 0.656
+      },
+      {
+        "secao": "10.5",
+        "titulo": "DIÁRIA DE PERMANÊNCIA A MAIOR\n \nA D",
+        "pagina": 30,
+        "relevancia": 0.584
+      }
+    ]
+  },
+  {
+    "numero": 16,
+    "codigo": "050002",
+    "nome": "Apresentação inválida",
+    "secoes_manual": [
+      {
+        "secao": "58.2",
+        "titulo": "INTERNAÇÃO SOBREPOSTA",
+        "pagina": 7,
+        "relevancia": 0.417
+      },
+      {
+        "secao": "58.6",
+        "titulo": "AGRAVOS",
+        "pagina": 7,
+        "relevancia": 0.414
+      },
+      {
+        "secao": "65.1",
+        "titulo": "REDE DE URGÊNCIA E EMERGÊNCIA - NOTA TÉCNICA INFORMATIVA",
+        "pagina": 7,
+        "relevancia": 0.411
+      }
+    ]
+  },
+  {
+    "numero": 17,
+    "codigo": "050004",
+    "nome": "Identificação da AIH inválida",
+    "secoes_manual": [
+      {
+        "secao": "58.5",
+        "titulo": "DUPLICIDADE DE CNS \n  \n            N",
+        "pagina": 88,
+        "relevancia": 0.594
+      },
+      {
+        "secao": "63.7",
+        "titulo": "DEFINIÇÃO DE PROCEDIMENTO PRINCIPAL, ESPECIAL E SECUNDÁRIO \nP",
+        "pagina": 75,
+        "relevancia": 0.588
+      },
+      {
+        "secao": "36",
+        "titulo": "Página 36",
+        "pagina": 36,
+        "relevancia": 0.587
+      }
+    ]
+  },
+  {
+    "numero": 18,
+    "codigo": "050007",
+    "nome": "Especialidade inválida",
+    "secoes_manual": [
+      {
+        "secao": "65.1",
+        "titulo": "REDE DE URGÊNCIA E EMERGÊNCIA - NOTA TÉCNICA INFORMATIVA",
+        "pagina": 7,
+        "relevancia": 0.474
+      },
+      {
+        "secao": "58.6",
+        "titulo": "AGRAVOS",
+        "pagina": 7,
+        "relevancia": 0.463
+      },
+      {
+        "secao": "36",
+        "titulo": "Página 36",
+        "pagina": 36,
+        "relevancia": 0.449
+      }
+    ]
+  },
+  {
+    "numero": 19,
+    "codigo": "050016",
+    "nome": "Data da autorização da AIH inválida",
+    "secoes_manual": [
+      {
+        "secao": "44",
+        "titulo": "ATENÇÃO AO IDOSO E HOSPITAL DIA EM GERIATRIA\nO",
+        "pagina": 52,
+        "relevancia": 0.641
+      },
+      {
+        "secao": "4.4.2",
+        "titulo": "AIH TIPO",
+        "pagina": 10,
+        "relevancia": 0.614
+      },
+      {
+        "secao": "8.5",
+        "titulo": "INTERCORRÊNCIAS PÓS-TRANSPLANTE \nA AIH",
+        "pagina": 18,
+        "relevancia": 0.612
+      }
+    ]
+  },
+  {
+    "numero": 20,
+    "codigo": "050017",
+    "nome": "Data da internação inválida",
+    "secoes_manual": [
+      {
+        "secao": "44",
+        "titulo": "ATENÇÃO AO IDOSO E HOSPITAL DIA EM GERIATRIA\nO",
+        "pagina": 52,
+        "relevancia": 0.597
+      },
+      {
+        "secao": "8.5",
+        "titulo": "INTERCORRÊNCIAS PÓS-TRANSPLANTE \nA AIH",
+        "pagina": 18,
+        "relevancia": 0.588
+      },
+      {
+        "secao": "4.4.2",
+        "titulo": "AIH TIPO",
+        "pagina": 10,
+        "relevancia": 0.588
+      }
+    ]
+  },
+  {
+    "numero": 21,
+    "codigo": "050023",
+    "nome": "Data da internação superior a 15 dias da data da autorização",
+    "secoes_manual": [
+      {
+        "secao": "8.5",
+        "titulo": "INTERCORRÊNCIAS PÓS-TRANSPLANTE \nA AIH",
+        "pagina": 18,
+        "relevancia": 0.646
+      },
+      {
+        "secao": "44",
+        "titulo": "ATENÇÃO AO IDOSO E HOSPITAL DIA EM GERIATRIA\nO",
+        "pagina": 52,
+        "relevancia": 0.635
+      },
+      {
+        "secao": "58.2",
+        "titulo": "INTERNAÇÃO SOBREPOSTA \n                  Q",
+        "pagina": 86,
+        "relevancia": 0.601
+      }
+    ]
+  },
+  {
+    "numero": 22,
+    "codigo": "050024",
+    "nome": "Procedimento solicitado inválido",
+    "secoes_manual": [
+      {
+        "secao": "8.2",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA  \n \nD",
+        "pagina": 20,
+        "relevancia": 0.599
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.586
+      },
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.567
+      }
+    ]
+  },
+  {
+    "numero": 23,
+    "codigo": "050025",
+    "nome": "Código de mudança de procedimento inválido",
+    "secoes_manual": [
+      {
+        "secao": "8.2",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA  \n \nD",
+        "pagina": 20,
+        "relevancia": 0.793
+      },
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.745
+      },
+      {
+        "secao": "8.4",
+        "titulo": "DE CIRURGIA PARA CIRURGIA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.712
+      }
+    ]
+  },
+  {
+    "numero": 24,
+    "codigo": "050031",
+    "nome": "Modalidade de internação inválida",
+    "secoes_manual": [
+      {
+        "secao": "57.5",
+        "titulo": "MÉDIA DE PERMANÊNCIA, IDADE E QUANTIDADE \n \nO",
+        "pagina": 85,
+        "relevancia": 0.536
+      },
+      {
+        "secao": "63.5",
+        "titulo": "MÉDIA DE PERMANÊNCIA, IDADE E QUANTIDADE \nO",
+        "pagina": 74,
+        "relevancia": 0.524
+      },
+      {
+        "secao": "18",
+        "titulo": "Página 18",
+        "pagina": 18,
+        "relevancia": 0.518
+      }
+    ]
+  },
+  {
+    "numero": 25,
+    "codigo": "050033",
+    "nome": "Identificação documento médico solicitante inválida",
+    "secoes_manual": [
+      {
+        "secao": "64.3.2",
+        "titulo": "SOLICITAÇÃO POR FAMILIARES E/OU DO RESPONSÁVEL LEGAL DO PACIENTE \nQ",
+        "pagina": 77,
+        "relevancia": 0.637
+      },
+      {
+        "secao": "4.3",
+        "titulo": "LAUDO PARA SOLICITAÇÃO DE INTERNAÇÃO - AIH \nLAUDO É DIFERENTE DE AIH. \nO L",
+        "pagina": 9,
+        "relevancia": 0.601
+      },
+      {
+        "secao": "64.3.1",
+        "titulo": "SOLICITAÇÃO PELO PRÓPRIO PACIENTE \nC",
+        "pagina": 77,
+        "relevancia": 0.589
+      }
+    ]
+  },
+  {
+    "numero": 26,
+    "codigo": "050034",
+    "nome": "CPF do médico solicitante inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.641
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.635
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.628
+      }
+    ]
+  },
+  {
+    "numero": 27,
+    "codigo": "050035",
+    "nome": "CNS do médico solicitante inválido",
+    "secoes_manual": [
+      {
+        "secao": "58.1",
+        "titulo": "DUPLICIDADE DE NOME \n               \n \nO SIHD",
+        "pagina": 86,
+        "relevancia": 0.623
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.618
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.607
+      }
+    ]
+  },
+  {
+    "numero": 28,
+    "codigo": "050036",
+    "nome": "Identificação documento médico responsável inválida",
+    "secoes_manual": [
+      {
+        "secao": "64.3.2",
+        "titulo": "SOLICITAÇÃO POR FAMILIARES E/OU DO RESPONSÁVEL LEGAL DO PACIENTE \nQ",
+        "pagina": 77,
+        "relevancia": 0.644
+      },
+      {
+        "secao": "64.3.1",
+        "titulo": "SOLICITAÇÃO PELO PRÓPRIO PACIENTE \nC",
+        "pagina": 77,
+        "relevancia": 0.625
+      },
+      {
+        "secao": "4.3",
+        "titulo": "LAUDO PARA SOLICITAÇÃO DE INTERNAÇÃO - AIH \nLAUDO É DIFERENTE DE AIH. \nO L",
+        "pagina": 9,
+        "relevancia": 0.619
+      }
+    ]
+  },
+  {
+    "numero": 29,
+    "codigo": "050037",
+    "nome": "CPF do médico responsável inválido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.675
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.661
+      },
+      {
+        "secao": "4.6",
+        "titulo": "AUDITORIA DO ATO MÉDICO \n \nA R",
+        "pagina": 12,
+        "relevancia": 0.656
+      }
+    ]
+  },
+  {
+    "numero": 30,
+    "codigo": "050038",
+    "nome": "CNS do médico responsável inválido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.646
+      },
+      {
+        "secao": "58.1",
+        "titulo": "DUPLICIDADE DE NOME \n               \n \nO SIHD",
+        "pagina": 86,
+        "relevancia": 0.636
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.616
+      }
+    ]
+  },
+  {
+    "numero": 31,
+    "codigo": "050039",
+    "nome": "Identificação documento diretor clínico inválida",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "AUDITORIA DO ATO MÉDICO \n \nA R",
+        "pagina": 12,
+        "relevancia": 0.627
+      },
+      {
+        "secao": "64.3.2",
+        "titulo": "SOLICITAÇÃO POR FAMILIARES E/OU DO RESPONSÁVEL LEGAL DO PACIENTE \nQ",
+        "pagina": 77,
+        "relevancia": 0.62
+      },
+      {
+        "secao": "42",
+        "titulo": "DIAGNOSTICO E/OU ATENDIMENTO DE URGÊNCIA EM CLÍNICA MÉDICA,\nPEDIÁTRICA E CIRÚRGICA \n \nO",
+        "pagina": 51,
+        "relevancia": 0.6
+      }
+    ]
+  },
+  {
+    "numero": 32,
+    "codigo": "050040",
+    "nome": "Cpf do diretor clínico inválido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.62
+      },
+      {
+        "secao": "4.6",
+        "titulo": "AUDITORIA DO ATO MÉDICO \n \nA R",
+        "pagina": 12,
+        "relevancia": 0.608
+      },
+      {
+        "secao": "15",
+        "titulo": "CONSULTA/AVALIAÇÃO EM PACIENTE INTERNADO\n \nÉ",
+        "pagina": 28,
+        "relevancia": 0.589
+      }
+    ]
+  },
+  {
+    "numero": 33,
+    "codigo": "050041",
+    "nome": "CNS do diretor clínico inválido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.66
+      },
+      {
+        "secao": "58.1",
+        "titulo": "DUPLICIDADE DE NOME \n               \n \nO SIHD",
+        "pagina": 86,
+        "relevancia": 0.65
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.616
+      }
+    ]
+  },
+  {
+    "numero": 34,
+    "codigo": "050042",
+    "nome": "Identificação documento do médico autorizador inválida",
+    "secoes_manual": [
+      {
+        "secao": "64.3.2",
+        "titulo": "SOLICITAÇÃO POR FAMILIARES E/OU DO RESPONSÁVEL LEGAL DO PACIENTE \nQ",
+        "pagina": 77,
+        "relevancia": 0.634
+      },
+      {
+        "secao": "4.3",
+        "titulo": "LAUDO PARA SOLICITAÇÃO DE INTERNAÇÃO - AIH \nLAUDO É DIFERENTE DE AIH. \nO L",
+        "pagina": 9,
+        "relevancia": 0.631
+      },
+      {
+        "secao": "19",
+        "titulo": "ESTUDOS HEMODINÂMICOS, ARTERIOGRAFIA, RADIOLOGIA INTERVENCIONISTA.\nQ",
+        "pagina": 31,
+        "relevancia": 0.618
+      }
+    ]
+  },
+  {
+    "numero": 35,
+    "codigo": "050043",
+    "nome": "Cpf do médico autorizador inválido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.668
+      },
+      {
+        "secao": "19",
+        "titulo": "ESTUDOS HEMODINÂMICOS, ARTERIOGRAFIA, RADIOLOGIA INTERVENCIONISTA.\nQ",
+        "pagina": 31,
+        "relevancia": 0.664
+      },
+      {
+        "secao": "31.1",
+        "titulo": "PARTO NORMAL  \nO P",
+        "pagina": 40,
+        "relevancia": 0.659
+      }
+    ]
+  },
+  {
+    "numero": 36,
+    "codigo": "050044",
+    "nome": "CNS do médico autorizador inválido",
+    "secoes_manual": [
+      {
+        "secao": "58.1",
+        "titulo": "DUPLICIDADE DE NOME \n               \n \nO SIHD",
+        "pagina": 86,
+        "relevancia": 0.642
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.63
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.63
+      }
+    ]
+  },
+  {
+    "numero": 37,
+    "codigo": "050053",
+    "nome": "Nome do responsável pelo paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "10.1",
+        "titulo": "DIÁRIAS DE ACOMPANHANTE \n \nP",
+        "pagina": 27,
+        "relevancia": 0.691
+      },
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.663
+      },
+      {
+        "secao": "41",
+        "titulo": "TRATAMENTO EM REABILITAÇÃO\n \nT",
+        "pagina": 51,
+        "relevancia": 0.655
+      }
+    ]
+  },
+  {
+    "numero": 38,
+    "codigo": "050054",
+    "nome": "Nome da mãe do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "33.2",
+        "titulo": "ATENDIMENTO AO RECÉM-NASCIDO IMEDIATAMENTE APÓS O PARTO \nC",
+        "pagina": 43,
+        "relevancia": 0.567
+      },
+      {
+        "secao": "64.3.2",
+        "titulo": "SOLICITAÇÃO POR FAMILIARES E/OU DO RESPONSÁVEL LEGAL DO PACIENTE \nQ",
+        "pagina": 77,
+        "relevancia": 0.559
+      },
+      {
+        "secao": "33.1",
+        "titulo": "PRIMEIRA CONSULTA DE PEDIATRIA AO RECÉM-NASCIDO  \nÉ",
+        "pagina": 43,
+        "relevancia": 0.548
+      }
+    ]
+  },
+  {
+    "numero": 39,
+    "codigo": "050055",
+    "nome": "Identificação do documento do paciente inválida",
+    "secoes_manual": [
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.644
+      },
+      {
+        "secao": "64.3.2",
+        "titulo": "SOLICITAÇÃO POR FAMILIARES E/OU DO RESPONSÁVEL LEGAL DO PACIENTE \nQ",
+        "pagina": 77,
+        "relevancia": 0.625
+      },
+      {
+        "secao": "42",
+        "titulo": "DIAGNOSTICO E/OU ATENDIMENTO DE URGÊNCIA EM CLÍNICA MÉDICA,\nPEDIÁTRICA E CIRÚRGICA \n \nO",
+        "pagina": 51,
+        "relevancia": 0.592
+      }
+    ]
+  },
+  {
+    "numero": 40,
+    "codigo": "050058",
+    "nome": "Procedimento realizado exigente CNS do paciente",
+    "secoes_manual": [
+      {
+        "secao": "17",
+        "titulo": "FISIOTERAPIA\n \nO",
+        "pagina": 38,
+        "relevancia": 0.688
+      },
+      {
+        "secao": "21",
+        "titulo": "ANATOMIA PATOLÓGICA\n \nO",
+        "pagina": 38,
+        "relevancia": 0.666
+      },
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.659
+      }
+    ]
+  },
+  {
+    "numero": 41,
+    "codigo": "050066",
+    "nome": "Município do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "30.1.1",
+        "titulo": "PROCEDIMENTOS PRINCIPAIS EM HOSPITAL GERAL",
+        "pagina": 5,
+        "relevancia": 0.613
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-TRANSPLANTE DE MEDULA \nÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS",
+        "pagina": 6,
+        "relevancia": 0.592
+      },
+      {
+        "secao": "30.1.2",
+        "titulo": "DIÁRIA DE SAÚDE MENTAL",
+        "pagina": 5,
+        "relevancia": 0.576
+      }
+    ]
+  },
+  {
+    "numero": 42,
+    "codigo": "050067",
+    "nome": "UF do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.12",
+        "titulo": "QUANDO NÃO EMITIR NOVA AIH \n \nN",
+        "pagina": 15,
+        "relevancia": 0.64
+      },
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.639
+      },
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.611
+      }
+    ]
+  },
+  {
+    "numero": 43,
+    "codigo": "050062",
+    "nome": "Logradouro do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.714
+      },
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.68
+      },
+      {
+        "secao": "5.6",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA  \n \nS",
+        "pagina": 14,
+        "relevancia": 0.667
+      }
+    ]
+  },
+  {
+    "numero": 44,
+    "codigo": "050063",
+    "nome": "Número do endereço do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "42",
+        "titulo": "DIAGNOSTICO E/OU ATENDIMENTO DE URGÊNCIA EM CLÍNICA MÉDICA,\nPEDIÁTRICA E CIRÚRGICA \n \nO",
+        "pagina": 51,
+        "relevancia": 0.555
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.541
+      },
+      {
+        "secao": "8.2",
+        "titulo": "DE CLINICA MÉDICA PARA CIRURGIA  \nN",
+        "pagina": 17,
+        "relevancia": 0.536
+      }
+    ]
+  },
+  {
+    "numero": 45,
+    "codigo": "050064",
+    "nome": "Complemento logradouro do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.6",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA  \n \nS",
+        "pagina": 14,
+        "relevancia": 0.672
+      },
+      {
+        "secao": "5.6",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA  \nS",
+        "pagina": 13,
+        "relevancia": 0.67
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \nE",
+        "pagina": 13,
+        "relevancia": 0.653
+      }
+    ]
+  },
+  {
+    "numero": 46,
+    "codigo": "050065",
+    "nome": "Bairro do paciente inválido",
+    "secoes_manual": [
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.719
+      },
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.68
+      },
+      {
+        "secao": "5.12",
+        "titulo": "QUANDO NÃO EMITIR NOVA AIH \n \nN",
+        "pagina": 15,
+        "relevancia": 0.673
+      }
+    ]
+  },
+  {
+    "numero": 47,
+    "codigo": "050080",
+    "nome": "Raça/cor do paciente inválida",
+    "secoes_manual": [
+      {
+        "secao": "41",
+        "titulo": "TRATAMENTO EM REABILITAÇÃO\n \nT",
+        "pagina": 51,
+        "relevancia": 0.412
+      },
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.393
+      },
+      {
+        "secao": "5.12",
+        "titulo": "QUANDO NÃO EMITIR NOVA AIH \n \nN",
+        "pagina": 15,
+        "relevancia": 0.377
+      }
+    ]
+  },
+  {
+    "numero": 48,
+    "codigo": "050086",
+    "nome": "Especialidade procedimento principal incompatível especialidade da aih",
+    "secoes_manual": [
+      {
+        "secao": "63.7",
+        "titulo": "DEFINIÇÃO DE PROCEDIMENTO PRINCIPAL, ESPECIAL E SECUNDÁRIO \nP",
+        "pagina": 75,
+        "relevancia": 0.743
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.672
+      },
+      {
+        "secao": "4.4.4",
+        "titulo": "INSTRUMENTO DE REGISTRO \n \nO",
+        "pagina": 12,
+        "relevancia": 0.664
+      }
+    ]
+  },
+  {
+    "numero": 49,
+    "codigo": "050090",
+    "nome": "Modalidade da AIH diferente da modalidade do procedimento principal",
+    "secoes_manual": [
+      {
+        "secao": "63.7",
+        "titulo": "DEFINIÇÃO DE PROCEDIMENTO PRINCIPAL, ESPECIAL E SECUNDÁRIO \nP",
+        "pagina": 75,
+        "relevancia": 0.666
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.66
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.658
+      }
+    ]
+  },
+  {
+    "numero": 50,
+    "codigo": "050111",
+    "nome": "Procedimento solicitado não permite mudança de procedimento",
+    "secoes_manual": [
+      {
+        "secao": "5.6",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA  \nS",
+        "pagina": 13,
+        "relevancia": 0.462
+      },
+      {
+        "secao": "8.4",
+        "titulo": "DE CIRURGIA PARA CIRURGIA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.456
+      },
+      {
+        "secao": "8.2",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA  \n \nD",
+        "pagina": 20,
+        "relevancia": 0.455
+      }
+    ]
+  },
+  {
+    "numero": 51,
+    "codigo": "050127",
+    "nome": "Médico autorizador não pode ser o médico solicitante",
+    "secoes_manual": [
+      {
+        "secao": "64.3.4",
+        "titulo": "SOLICITAÇÃO DO PRONTUÁRIO DO PACIENTE POR AUTORIDADES POLICIAIS OU \nJUDICIÁRIAS \nC",
+        "pagina": 78,
+        "relevancia": 0.579
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.556
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.55
+      }
+    ]
+  },
+  {
+    "numero": 52,
+    "codigo": "050128",
+    "nome": "Médico autorizador não pode ser o médico responsável pelo paciente",
+    "secoes_manual": [
+      {
+        "secao": "64.3.4",
+        "titulo": "SOLICITAÇÃO DO PRONTUÁRIO DO PACIENTE POR AUTORIDADES POLICIAIS OU \nJUDICIÁRIAS \nC",
+        "pagina": 78,
+        "relevancia": 0.581
+      },
+      {
+        "secao": "64.3.1",
+        "titulo": "SOLICITAÇÃO PELO PRÓPRIO PACIENTE \nC",
+        "pagina": 77,
+        "relevancia": 0.545
+      },
+      {
+        "secao": "10.1",
+        "titulo": "DIÁRIAS DE ACOMPANHANTE \n \nP",
+        "pagina": 27,
+        "relevancia": 0.545
+      }
+    ]
+  },
+  {
+    "numero": 53,
+    "codigo": "050129",
+    "nome": "Médico autorizador não pode ser o diretor clínico do hospital",
+    "secoes_manual": [
+      {
+        "secao": "64.3.4",
+        "titulo": "SOLICITAÇÃO DO PRONTUÁRIO DO PACIENTE POR AUTORIDADES POLICIAIS OU \nJUDICIÁRIAS \nC",
+        "pagina": 78,
+        "relevancia": 0.554
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.55
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.528
+      }
+    ]
+  },
+  {
+    "numero": 54,
+    "codigo": "050169",
+    "nome": "Diagnóstico secundário 1 inválido",
+    "secoes_manual": [
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.644
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.635
+      },
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.633
+      }
+    ]
+  },
+  {
+    "numero": 55,
+    "codigo": "050172",
+    "nome": "Diagnóstico secundário 2 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.626
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.595
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.594
+      }
+    ]
+  },
+  {
+    "numero": 56,
+    "codigo": "050175",
+    "nome": "Diagnóstico secundário 3 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.668
+      },
+      {
+        "secao": "21",
+        "titulo": "ANATOMIA PATOLÓGICA\n \nO",
+        "pagina": 38,
+        "relevancia": 0.657
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.651
+      }
+    ]
+  },
+  {
+    "numero": 57,
+    "codigo": "050178",
+    "nome": "Diagnóstico secundário 4 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.695
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.694
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA",
+        "pagina": 4,
+        "relevancia": 0.673
+      }
+    ]
+  },
+  {
+    "numero": 58,
+    "codigo": "050181",
+    "nome": "Diagnóstico secundário 5 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.708
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.702
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA",
+        "pagina": 4,
+        "relevancia": 0.668
+      }
+    ]
+  },
+  {
+    "numero": 59,
+    "codigo": "050184",
+    "nome": "Diagnóstico secundário 6 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.704
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.686
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA",
+        "pagina": 4,
+        "relevancia": 0.656
+      }
+    ]
+  },
+  {
+    "numero": 60,
+    "codigo": "050187",
+    "nome": "Diagnóstico secundário 7 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.691
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.658
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.638
+      }
+    ]
+  },
+  {
+    "numero": 61,
+    "codigo": "050190",
+    "nome": "Diagnóstico secundário 8 inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.669
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.659
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.617
+      }
+    ]
+  },
+  {
+    "numero": 62,
+    "codigo": "050193",
+    "nome": "Diagnóstico secundário 9 inválido",
+    "secoes_manual": [
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.68
+      },
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.677
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA",
+        "pagina": 4,
+        "relevancia": 0.656
+      }
+    ]
+  },
+  {
+    "numero": 63,
+    "codigo": "050170",
+    "nome": "Diagnóstico secundário 1 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.527
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.519
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.512
+      }
+    ]
+  },
+  {
+    "numero": 64,
+    "codigo": "050173",
+    "nome": "Diagnóstico secundário 2 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.517
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.506
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.498
+      }
+    ]
+  },
+  {
+    "numero": 65,
+    "codigo": "050176",
+    "nome": "Diagnóstico secundário 3 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "26",
+        "titulo": "ANATOMIA PATOLÓGICA\n \nO",
+        "pagina": 34,
+        "relevancia": 0.524
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.523
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.52
+      }
+    ]
+  },
+  {
+    "numero": 66,
+    "codigo": "050179",
+    "nome": "Diagnóstico secundário 4 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.516
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.513
+      },
+      {
+        "secao": "26",
+        "titulo": "ANATOMIA PATOLÓGICA\n \nO",
+        "pagina": 34,
+        "relevancia": 0.507
+      }
+    ]
+  },
+  {
+    "numero": 67,
+    "codigo": "050182",
+    "nome": "Diagnóstico secundário 5 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.521
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.52
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.516
+      }
+    ]
+  },
+  {
+    "numero": 68,
+    "codigo": "050185",
+    "nome": "Diagnóstico secundário 6 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.52
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.519
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.515
+      }
+    ]
+  },
+  {
+    "numero": 69,
+    "codigo": "050188",
+    "nome": "Diagnóstico secundário 7 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.522
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.522
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.519
+      }
+    ]
+  },
+  {
+    "numero": 70,
+    "codigo": "050191",
+    "nome": "Diagnóstico secundário 8 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.519
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.515
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.513
+      }
+    ]
+  },
+  {
+    "numero": 71,
+    "codigo": "050194",
+    "nome": "Diagnóstico secundário 9 incompatível com sexo do paciente",
+    "secoes_manual": [
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.527
+      },
+      {
+        "secao": "5.3",
+        "titulo": "DE CLÍNICA MÉDICA PARA OBSTETRÍCIA \nN",
+        "pagina": 12,
+        "relevancia": 0.527
+      },
+      {
+        "secao": "5.7",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA \n \nE",
+        "pagina": 14,
+        "relevancia": 0.522
+      }
+    ]
+  },
+  {
+    "numero": 72,
+    "codigo": "050171",
+    "nome": "Classificação diagnóstico secundário 1 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.604
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.576
+      },
+      {
+        "secao": "42",
+        "titulo": "DIAGNOSTICO E/OU ATENDIMENTO DE URGÊNCIA EM CLÍNICA MÉDICA,\nPEDIÁTRICA E CIRÚRGICA \n \nO",
+        "pagina": 51,
+        "relevancia": 0.53
+      }
+    ]
+  },
+  {
+    "numero": 73,
+    "codigo": "050174",
+    "nome": "Classificação diagnóstico secundário 2 inválido",
+    "secoes_manual": [
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.555
+      },
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.555
+      },
+      {
+        "secao": "29",
+        "titulo": "FATORES DE COAGULAÇÃO\n \nQ",
+        "pagina": 47,
+        "relevancia": 0.488
+      }
+    ]
+  },
+  {
+    "numero": 74,
+    "codigo": "050177",
+    "nome": "Classificação diagnóstico secundário 3 inválido",
+    "secoes_manual": [
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.594
+      },
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.593
+      },
+      {
+        "secao": "21",
+        "titulo": "ANATOMIA PATOLÓGICA\n \nO",
+        "pagina": 38,
+        "relevancia": 0.528
+      }
+    ]
+  },
+  {
+    "numero": 75,
+    "codigo": "050180",
+    "nome": "Classificação diagnóstico secundário 4 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.593
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.58
+      },
+      {
+        "secao": "8.6",
+        "titulo": "LAPAROTOMIA EXPLORADORA",
+        "pagina": 4,
+        "relevancia": 0.537
+      }
+    ]
+  },
+  {
+    "numero": 76,
+    "codigo": "050183",
+    "nome": "Classificação diagnóstico secundário 5 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.607
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.584
+      },
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.55
+      }
+    ]
+  },
+  {
+    "numero": 77,
+    "codigo": "050186",
+    "nome": "Classificação diagnóstico secundário 6 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.606
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.584
+      },
+      {
+        "secao": "42.2",
+        "titulo": "OUTRAS ORIENTAÇÕES GERAIS EM INTERNAÇÃO DE PACIENTE ONCOLÓGICO",
+        "pagina": 6,
+        "relevancia": 0.555
+      }
+    ]
+  },
+  {
+    "numero": 78,
+    "codigo": "050189",
+    "nome": "Classificação diagnóstico secundário 7 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.604
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.587
+      },
+      {
+        "secao": "42",
+        "titulo": "DIAGNOSTICO E/OU ATENDIMENTO DE URGÊNCIA EM CLÍNICA MÉDICA,\nPEDIÁTRICA E CIRÚRGICA \n \nO",
+        "pagina": 51,
+        "relevancia": 0.537
+      }
+    ]
+  },
+  {
+    "numero": 79,
+    "codigo": "050192",
+    "nome": "Classificação diagnóstico secundário 8 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.601
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.579
+      },
+      {
+        "secao": "42",
+        "titulo": "DIAGNOSTICO E/OU ATENDIMENTO DE URGÊNCIA EM CLÍNICA MÉDICA,\nPEDIÁTRICA E CIRÚRGICA \n \nO",
+        "pagina": 51,
+        "relevancia": 0.523
+      }
+    ]
+  },
+  {
+    "numero": 80,
+    "codigo": "050195",
+    "nome": "Classificação diagnóstico secundário 9 inválido",
+    "secoes_manual": [
+      {
+        "secao": "4.6",
+        "titulo": "CLASSIFICAÇÃO INTERNACIONAL DE DOENÇAS /CID \n              D",
+        "pagina": 13,
+        "relevancia": 0.607
+      },
+      {
+        "secao": "64.1",
+        "titulo": "ITENS OBRIGATÓRIOS NO PRONTUÁRIO DO PACIENTE",
+        "pagina": 77,
+        "relevancia": 0.57
+      },
+      {
+        "secao": "62.1",
+        "titulo": "CID X PROCEDIMENTO  \nN",
+        "pagina": 73,
+        "relevancia": 0.528
+      }
+    ]
+  },
+  {
+    "numero": 81,
+    "codigo": "050197",
+    "nome": "Cartão nacional de saúde do paciente não pode ser igual ao do med.resp",
+    "secoes_manual": [
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO, AIDS E \nTUBERCULOSE. \nQ",
+        "pagina": 13,
+        "relevancia": 0.549
+      },
+      {
+        "secao": "5.12",
+        "titulo": "QUANDO NÃO EMITIR NOVA AIH \n \nN",
+        "pagina": 15,
+        "relevancia": 0.543
+      },
+      {
+        "secao": "6.1",
+        "titulo": "ESPECIALIDADE DO LEITO \nO",
+        "pagina": 14,
+        "relevancia": 0.508
+      }
+    ]
+  },
+  {
+    "numero": 82,
+    "codigo": "050144",
+    "nome": "Número da aih posterior deve ser preenchido para aih com motivo de saida 29 (transf internação domiciliar)",
+    "secoes_manual": [
+      {
+        "secao": "5.11",
+        "titulo": "ENCERRAMENTO ADMINISTRATIVO \nA",
+        "pagina": 15,
+        "relevancia": 0.63
+      },
+      {
+        "secao": "4.5",
+        "titulo": "NUMERAÇÃO DE AIH \nN",
+        "pagina": 10,
+        "relevancia": 0.63
+      },
+      {
+        "secao": "8.5",
+        "titulo": "INTERCORRÊNCIAS PÓS-TRANSPLANTE \nA AIH",
+        "pagina": 18,
+        "relevancia": 0.628
+      }
+    ]
+  },
+  {
+    "numero": 83,
+    "codigo": "060015",
+    "nome": "Modalidade internação incompatível modalidade procedimento realizado",
+    "secoes_manual": [
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.639
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.608
+      },
+      {
+        "secao": "39",
+        "titulo": "Página 39",
+        "pagina": 39,
+        "relevancia": 0.607
+      }
+    ]
+  },
+  {
+    "numero": 84,
+    "codigo": "060014",
+    "nome": "Procedimento realizado inválido",
+    "secoes_manual": [
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.697
+      },
+      {
+        "secao": "39",
+        "titulo": "Página 39",
+        "pagina": 39,
+        "relevancia": 0.669
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.622
+      }
+    ]
+  },
+  {
+    "numero": 85,
+    "codigo": "060001",
+    "nome": "Identificação do profissional inválida",
+    "secoes_manual": [
+      {
+        "secao": "41",
+        "titulo": "TRATAMENTO EM REABILITAÇÃO\n \nT",
+        "pagina": 51,
+        "relevancia": 0.541
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.527
+      },
+      {
+        "secao": "19",
+        "titulo": "ESTUDOS HEMODINÂMICOS, ARTERIOGRAFIA, RADIOLOGIA INTERVENCIONISTA.\nQ",
+        "pagina": 31,
+        "relevancia": 0.51
+      }
+    ]
+  },
+  {
+    "numero": 86,
+    "codigo": "060002",
+    "nome": "Identificação do profissional não preenchida",
+    "secoes_manual": [
+      {
+        "secao": "4.5.6",
+        "titulo": "PROFISSIONAL SOLICITANTE, AUTORIZADOR, EXECUTANTE E AUDITOR \nAUTORIZADOR",
+        "pagina": 11,
+        "relevancia": 0.56
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.546
+      },
+      {
+        "secao": "15",
+        "titulo": "CONSULTA/AVALIAÇÃO EM PACIENTE INTERNADO\n \nÉ",
+        "pagina": 28,
+        "relevancia": 0.542
+      }
+    ]
+  },
+  {
+    "numero": 87,
+    "codigo": "060003",
+    "nome": "CPF do profissional não preenchido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.638
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.626
+      },
+      {
+        "secao": "31.1",
+        "titulo": "PARTO NORMAL  \nO P",
+        "pagina": 40,
+        "relevancia": 0.597
+      }
+    ]
+  },
+  {
+    "numero": 88,
+    "codigo": "060004",
+    "nome": "Cpf do profissional inválido",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.583
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.573
+      },
+      {
+        "secao": "31.1",
+        "titulo": "PARTO NORMAL  \nO P",
+        "pagina": 40,
+        "relevancia": 0.571
+      }
+    ]
+  },
+  {
+    "numero": 89,
+    "codigo": "060005",
+    "nome": "CBO do profissional não preenchido",
+    "secoes_manual": [
+      {
+        "secao": "4",
+        "titulo": "Página 4",
+        "pagina": 4,
+        "relevancia": 0.693
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.655
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.649
+      }
+    ]
+  },
+  {
+    "numero": 90,
+    "codigo": "060006",
+    "nome": "CBO do profissional inválido",
+    "secoes_manual": [
+      {
+        "secao": "4",
+        "titulo": "Página 4",
+        "pagina": 4,
+        "relevancia": 0.698
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.639
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.637
+      }
+    ]
+  },
+  {
+    "numero": 91,
+    "codigo": "060007",
+    "nome": "Procedimento secundário incompatível com CBO",
+    "secoes_manual": [
+      {
+        "secao": "4",
+        "titulo": "Página 4",
+        "pagina": 4,
+        "relevancia": 0.704
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.592
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.578
+      }
+    ]
+  },
+  {
+    "numero": 92,
+    "codigo": "060017",
+    "nome": "Quantidade superior à permitida",
+    "secoes_manual": [
+      {
+        "secao": "12",
+        "titulo": "QUANTIDADE MÁXIMA DE PROCEDIMENTOS POR AIH\n \nS",
+        "pagina": 31,
+        "relevancia": 0.647
+      },
+      {
+        "secao": "21",
+        "titulo": "Página 21",
+        "pagina": 21,
+        "relevancia": 0.523
+      },
+      {
+        "secao": "23.1",
+        "titulo": "REGISTRO DE NOTAS FISCAIS NO SISAIH",
+        "pagina": 40,
+        "relevancia": 0.521
+      }
+    ]
+  },
+  {
+    "numero": 93,
+    "codigo": "060050",
+    "nome": "Instrumento de registro do procedimento realizado não é de AIH",
+    "secoes_manual": [
+      {
+        "secao": "18",
+        "titulo": "RADIOLOGIA\n \nO",
+        "pagina": 38,
+        "relevancia": 0.662
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.642
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.634
+      }
+    ]
+  },
+  {
+    "numero": 94,
+    "codigo": "060008",
+    "nome": "Indicador da equipe inválido",
+    "secoes_manual": [
+      {
+        "secao": "65.1",
+        "titulo": "REDE DE URGÊNCIA E EMERGÊNCIA - NOTA TÉCNICA INFORMATIVA",
+        "pagina": 7,
+        "relevancia": 0.385
+      },
+      {
+        "secao": "47.6",
+        "titulo": "DESLOCAMENTO DE EQUIPE PROFISSIONAL PARA RETIRADA DE ÓRGÃOS \nO",
+        "pagina": 56,
+        "relevancia": 0.384
+      },
+      {
+        "secao": "41.7",
+        "titulo": "DESLOCAMENTO DE EQUIPE PROFISSIONAL PARA RETIRADA DE ÓRGÃOS \n \n                      N",
+        "pagina": 63,
+        "relevancia": 0.371
+      }
+    ]
+  },
+  {
+    "numero": 95,
+    "codigo": "060117",
+    "nome": "Quantidade inválida",
+    "secoes_manual": [
+      {
+        "secao": "8.5",
+        "titulo": "PROCEDIMENTO PRINCIPAL COM QUANTIDADE MAIOR QUE",
+        "pagina": 4,
+        "relevancia": 0.533
+      },
+      {
+        "secao": "12",
+        "titulo": "QUANTIDADE MÁXIMA DE PROCEDIMENTOS POR AIH\n \nS",
+        "pagina": 31,
+        "relevancia": 0.516
+      },
+      {
+        "secao": "36",
+        "titulo": "Página 36",
+        "pagina": 36,
+        "relevancia": 0.502
+      }
+    ]
+  },
+  {
+    "numero": 96,
+    "codigo": "060133",
+    "nome": "Instrumento de registro do procedimento realizado não encontrado",
+    "secoes_manual": [
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.699
+      },
+      {
+        "secao": "43",
+        "titulo": "Página 43",
+        "pagina": 43,
+        "relevancia": 0.625
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.6
+      }
+    ]
+  },
+  {
+    "numero": 97,
+    "codigo": "060146",
+    "nome": "Competência de execução inválida",
+    "secoes_manual": [
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.585
+      },
+      {
+        "secao": "36",
+        "titulo": "Página 36",
+        "pagina": 36,
+        "relevancia": 0.571
+      },
+      {
+        "secao": "38",
+        "titulo": "Página 38",
+        "pagina": 38,
+        "relevancia": 0.54
+      }
+    ]
+  },
+  {
+    "numero": 98,
+    "codigo": "060151",
+    "nome": "Competência de execução anterior à data de internação",
+    "secoes_manual": [
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.635
+      },
+      {
+        "secao": "22",
+        "titulo": "Página 22",
+        "pagina": 22,
+        "relevancia": 0.604
+      },
+      {
+        "secao": "39",
+        "titulo": "Página 39",
+        "pagina": 39,
+        "relevancia": 0.582
+      }
+    ]
+  },
+  {
+    "numero": 99,
+    "codigo": "060152",
+    "nome": "Competência de execução posterior à data de saída",
+    "secoes_manual": [
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.582
+      },
+      {
+        "secao": "39",
+        "titulo": "Página 39",
+        "pagina": 39,
+        "relevancia": 0.54
+      },
+      {
+        "secao": "63.1",
+        "titulo": "MÉDIA DE PERMANÊNCIA \nQ",
+        "pagina": 73,
+        "relevancia": 0.527
+      }
+    ]
+  },
+  {
+    "numero": 100,
+    "codigo": "060153",
+    "nome": "Competência de execução não preenchida",
+    "secoes_manual": [
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.6
+      },
+      {
+        "secao": "38",
+        "titulo": "Página 38",
+        "pagina": 38,
+        "relevancia": 0.581
+      },
+      {
+        "secao": "6",
+        "titulo": "Página 6",
+        "pagina": 6,
+        "relevancia": 0.553
+      }
+    ]
+  },
+  {
+    "numero": 101,
+    "codigo": "050028",
+    "nome": "Indicativo de mudança de procedimento incorreto",
+    "secoes_manual": [
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.785
+      },
+      {
+        "secao": "8.2",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA  \n \nD",
+        "pagina": 20,
+        "relevancia": 0.761
+      },
+      {
+        "secao": "5.6",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA  \n \nS",
+        "pagina": 14,
+        "relevancia": 0.732
+      }
+    ]
+  },
+  {
+    "numero": 102,
+    "codigo": "050027",
+    "nome": "Mudança de procedimento não efetuada",
+    "secoes_manual": [
+      {
+        "secao": "8.2",
+        "titulo": "DE CLÍNICA MÉDICA PARA CIRURGIA  \n \nD",
+        "pagina": 20,
+        "relevancia": 0.778
+      },
+      {
+        "secao": "8.3",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.767
+      },
+      {
+        "secao": "5.6",
+        "titulo": "DE CIRURGIA PARA CLÍNICA MÉDICA  \nS",
+        "pagina": 13,
+        "relevancia": 0.755
+      }
+    ]
+  },
+  {
+    "numero": 103,
+    "codigo": "060120",
+    "nome": "Procedimento realizado exige habilitação",
+    "secoes_manual": [
+      {
+        "secao": "38",
+        "titulo": "Página 38",
+        "pagina": 38,
+        "relevancia": 0.66
+      },
+      {
+        "secao": "39",
+        "titulo": "Página 39",
+        "pagina": 39,
+        "relevancia": 0.658
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.63
+      }
+    ]
+  },
+  {
+    "numero": 104,
+    "codigo": "060072",
+    "nome": "Hospital não possui o servico/classificacao exigidos",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.459
+      },
+      {
+        "secao": "4.3",
+        "titulo": "LAUDO PARA SOLICITAÇÃO DE INTERNAÇÃO - AIH \nLAUDO É DIFERENTE DE AIH. \nO L",
+        "pagina": 9,
+        "relevancia": 0.444
+      },
+      {
+        "secao": "13.1",
+        "titulo": "DIÁRIAS DE ACOMPANHANTE \nP",
+        "pagina": 25,
+        "relevancia": 0.428
+      }
+    ]
+  },
+  {
+    "numero": 105,
+    "codigo": "060109",
+    "nome": "Profissional não vinculado ao cnes com o cbo informado",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.664
+      },
+      {
+        "secao": "4",
+        "titulo": "Página 4",
+        "pagina": 4,
+        "relevancia": 0.659
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.632
+      }
+    ]
+  },
+  {
+    "numero": 106,
+    "codigo": "060129",
+    "nome": "Obrigatório procedimento principal na primeira linha dos proceds realizados",
+    "secoes_manual": [
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.65
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.632
+      },
+      {
+        "secao": "10",
+        "titulo": "Página 10",
+        "pagina": 10,
+        "relevancia": 0.623
+      }
+    ]
+  },
+  {
+    "numero": 107,
+    "codigo": "060082",
+    "nome": "Quantidade de diarias superior a capacidade instalada",
+    "secoes_manual": [
+      {
+        "secao": "63.6",
+        "titulo": "REJEIÇÃO DE AIH POR QUANTIDADE DE DIÁRIAS SUPERIOR À CAPACIDADE INSTALADA \nA",
+        "pagina": 74,
+        "relevancia": 0.599
+      },
+      {
+        "secao": "12",
+        "titulo": "QUANTIDADE MÁXIMA DE PROCEDIMENTOS POR AIH\n \nS",
+        "pagina": 31,
+        "relevancia": 0.573
+      },
+      {
+        "secao": "29",
+        "titulo": "Página 29",
+        "pagina": 29,
+        "relevancia": 0.53
+      }
+    ]
+  },
+  {
+    "numero": 108,
+    "codigo": "060084",
+    "nome": "Quantidade de diarias de UTI superior a capacidade instalada",
+    "secoes_manual": [
+      {
+        "secao": "63.6",
+        "titulo": "REJEIÇÃO DE AIH POR QUANTIDADE DE DIÁRIAS SUPERIOR À CAPACIDADE INSTALADA \nA",
+        "pagina": 74,
+        "relevancia": 0.719
+      },
+      {
+        "secao": "5.11",
+        "titulo": "ENCERRAMENTO ADMINISTRATIVO \nA",
+        "pagina": 15,
+        "relevancia": 0.648
+      },
+      {
+        "secao": "59.1",
+        "titulo": "POR QUANTIDADE DE DIÁRIAS SUPERIOR À CAPACIDADE INSTALADA \n \nA",
+        "pagina": 88,
+        "relevancia": 0.618
+      }
+    ]
+  },
+  {
+    "numero": 109,
+    "codigo": "050008",
+    "nome": "Hospital não possui leitos na especialidade",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.472
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.464
+      },
+      {
+        "secao": "28.1",
+        "titulo": "PRIMEIRA CONSULTA DE PEDIATRIA AO RECÉM-NASCIDO  \n \nÉ",
+        "pagina": 46,
+        "relevancia": 0.451
+      }
+    ]
+  },
+  {
+    "numero": 110,
+    "codigo": "060065",
+    "nome": "Profissional autônomo não cadastrado no hospital com CBO informado",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.733
+      },
+      {
+        "secao": "4",
+        "titulo": "Página 4",
+        "pagina": 4,
+        "relevancia": 0.637
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.627
+      }
+    ]
+  },
+  {
+    "numero": 111,
+    "codigo": "060110",
+    "nome": "Profissional vinculado não cadastrado",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.521
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.498
+      },
+      {
+        "secao": "4.5.6",
+        "titulo": "PROFISSIONAL SOLICITANTE, AUTORIZADOR, EXECUTANTE E AUDITOR \nAUTORIZADOR",
+        "pagina": 11,
+        "relevancia": 0.485
+      }
+    ]
+  },
+  {
+    "numero": 112,
+    "codigo": "060074",
+    "nome": "Profissional autônomo não cadastrado",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.548
+      },
+      {
+        "secao": "10.1",
+        "titulo": "DIÁRIAS DE ACOMPANHANTE \n \nP",
+        "pagina": 27,
+        "relevancia": 0.497
+      },
+      {
+        "secao": "41",
+        "titulo": "TRATAMENTO EM REABILITAÇÃO\n \nT",
+        "pagina": 51,
+        "relevancia": 0.494
+      }
+    ]
+  },
+  {
+    "numero": 114,
+    "codigo": "060028",
+    "nome": "Hospital não possui leitos de UTI II ADULTO",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.487
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.475
+      },
+      {
+        "secao": "28.1",
+        "titulo": "PRIMEIRA CONSULTA DE PEDIATRIA AO RECÉM-NASCIDO  \n \nÉ",
+        "pagina": 46,
+        "relevancia": 0.473
+      }
+    ]
+  },
+  {
+    "numero": 115,
+    "codigo": "060025",
+    "nome": "Hospital não possui leitos de UTI II PEDIÁTRICA",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.485
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.476
+      },
+      {
+        "secao": "6.1",
+        "titulo": "ESPECIALIDADE DO LEITO \nO",
+        "pagina": 14,
+        "relevancia": 0.461
+      }
+    ]
+  },
+  {
+    "numero": 116,
+    "codigo": "060022",
+    "nome": "Hospital não possui leitos de UTI II NEONATAL",
+    "secoes_manual": [
+      {
+        "secao": "28.1",
+        "titulo": "PRIMEIRA CONSULTA DE PEDIATRIA AO RECÉM-NASCIDO  \n \nÉ",
+        "pagina": 46,
+        "relevancia": 0.475
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.463
+      },
+      {
+        "secao": "41.13",
+        "titulo": "ATENDIMENTO EM REGIME DE HOSPITAL-DIA PARA INTERCORRÊNCIAS PÓS-\nTRANSPLANTE DE MEDULA ÓSSEA E OUTROS ÓRGÃOS HEMATOPOIÉTICOS \n \n                 P",
+        "pagina": 67,
+        "relevancia": 0.457
+      }
+    ]
+  },
+  {
+    "numero": 117,
+    "codigo": "050134",
+    "nome": "CID indicação inválida para laqueadura tubária",
+    "secoes_manual": [
+      {
+        "secao": "29",
+        "titulo": "FATORES DE COAGULAÇÃO\n \nQ",
+        "pagina": 47,
+        "relevancia": 0.531
+      },
+      {
+        "secao": "41.9.2",
+        "titulo": "PROCESSAMENTO DE TUBO VALVADO OU VÁLVULA CARDÍACA HUMANOS \n \nR",
+        "pagina": 65,
+        "relevancia": 0.418
+      },
+      {
+        "secao": "55",
+        "titulo": "RATEIO DE PONTOS DE SERVIÇOS PROFISSIONAIS/SP NA AIH",
+        "pagina": 7,
+        "relevancia": 0.404
+      }
+    ]
+  },
+  {
+    "numero": 118,
+    "codigo": "040008",
+    "nome": "AIH com data da saída anterior a quatro meses da apresentação",
+    "secoes_manual": [
+      {
+        "secao": "4.7.1",
+        "titulo": "VALIDADE DA AIH \nA",
+        "pagina": 12,
+        "relevancia": 0.747
+      },
+      {
+        "secao": "4.7.1",
+        "titulo": "VALIDADE DA AIH \nA",
+        "pagina": 13,
+        "relevancia": 0.707
+      },
+      {
+        "secao": "4.4.2",
+        "titulo": "AIH TIPO",
+        "pagina": 10,
+        "relevancia": 0.673
+      }
+    ]
+  },
+  {
+    "numero": 119,
+    "codigo": "060221",
+    "nome": "Procedimento exige AIH do PNRF (Programa Nacional de Redução de Filas)",
+    "secoes_manual": [
+      {
+        "secao": "41.9.3",
+        "titulo": "PROCESSAMENTO DE CÓRNEA/ESCLERA \nE",
+        "pagina": 65,
+        "relevancia": 0.599
+      },
+      {
+        "secao": "47.11",
+        "titulo": "PROCESSAMENTO DE CÓRNEA/ESCLERA \n \nE",
+        "pagina": 57,
+        "relevancia": 0.596
+      },
+      {
+        "secao": "5.11",
+        "titulo": "ENCERRAMENTO ADMINISTRATIVO \nA",
+        "pagina": 15,
+        "relevancia": 0.576
+      }
+    ]
+  },
+  {
+    "numero": 120,
+    "codigo": "000001",
+    "nome": "Profissional sem vínculo na competência de execução",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.505
+      },
+      {
+        "secao": "4.5.6",
+        "titulo": "PROFISSIONAL SOLICITANTE, AUTORIZADOR, EXECUTANTE E AUDITOR \nAUTORIZADOR",
+        "pagina": 11,
+        "relevancia": 0.497
+      },
+      {
+        "secao": "32",
+        "titulo": "Página 32",
+        "pagina": 32,
+        "relevancia": 0.491
+      }
+    ]
+  },
+  {
+    "numero": 121,
+    "codigo": "000002",
+    "nome": "Profissional com CBO e/ou vínculos divergentes no CNES",
+    "secoes_manual": [
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \nO CBO",
+        "pagina": 16,
+        "relevancia": 0.669
+      },
+      {
+        "secao": "4",
+        "titulo": "Página 4",
+        "pagina": 4,
+        "relevancia": 0.636
+      },
+      {
+        "secao": "7.1",
+        "titulo": "CADASTRO DE CBO DE MÉDICOS E DE MÉDICOS RESIDENTES \n \nE",
+        "pagina": 18,
+        "relevancia": 0.632
+      }
+    ]
+  },
+  {
+    "numero": 122,
+    "codigo": "060114",
+    "nome": "Procedimento realizado exige lançamento de CNES",
+    "secoes_manual": [
+      {
+        "secao": "11",
+        "titulo": "Página 11",
+        "pagina": 11,
+        "relevancia": 0.587
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.578
+      },
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.577
+      }
+    ]
+  },
+  {
+    "numero": 123,
+    "codigo": "050142",
+    "nome": "Lançamento obrigatório de OPM. Verifique compatibilidade no SIGTAP",
+    "secoes_manual": [
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.489
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.489
+      },
+      {
+        "secao": "46",
+        "titulo": "REGISTRO DE MEDICAMENTOS NA AIH\nO",
+        "pagina": 52,
+        "relevancia": 0.449
+      }
+    ]
+  },
+  {
+    "numero": 124,
+    "codigo": "060057",
+    "nome": "Terceiro/Cooperativa não cadastrado",
+    "secoes_manual": [
+      {
+        "secao": "9.2",
+        "titulo": "CIRURGIAS MÚLTIPLAS \n \nC",
+        "pagina": 24,
+        "relevancia": 0.453
+      },
+      {
+        "secao": "10",
+        "titulo": "CIRURGIAS MÚLTIPLAS\nC",
+        "pagina": 21,
+        "relevancia": 0.436
+      },
+      {
+        "secao": "4.4.3",
+        "titulo": "NUMERAÇÃO DE AIH",
+        "pagina": 3,
+        "relevancia": 0.432
+      }
+    ]
+  },
+  {
+    "numero": 125,
+    "codigo": "060216",
+    "nome": "Competência OPM diferente da competência do procedimento relacionado",
+    "secoes_manual": [
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.54
+      },
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.539
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.446
+      }
+    ]
+  },
+  {
+    "numero": 126,
+    "codigo": "050136",
+    "nome": "CID Indicação Inválido para Vasectomia",
+    "secoes_manual": [
+      {
+        "secao": "41.4.1",
+        "titulo": "AVALIAÇÃO DO POSSÍVEL DOADOR FALECIDO DE ÓRGÃOS OU TECIDOS PARA \nTRANSPLANTES \n                   P",
+        "pagina": 62,
+        "relevancia": 0.443
+      },
+      {
+        "secao": "29",
+        "titulo": "FATORES DE COAGULAÇÃO\n \nQ",
+        "pagina": 47,
+        "relevancia": 0.435
+      },
+      {
+        "secao": "8.2",
+        "titulo": "DE CLINICA MÉDICA PARA CIRURGIA  \nN",
+        "pagina": 17,
+        "relevancia": 0.432
+      }
+    ]
+  },
+  {
+    "numero": 127,
+    "codigo": "060204",
+    "nome": "Procedimentos Principais Excludentes",
+    "secoes_manual": [
+      {
+        "secao": "58.6",
+        "titulo": "AGRAVOS",
+        "pagina": 7,
+        "relevancia": 0.521
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.495
+      },
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.494
+      }
+    ]
+  },
+  {
+    "numero": 128,
+    "codigo": "060039",
+    "nome": "Cobrança de mais de um código de diária de Acompanhante",
+    "secoes_manual": [
+      {
+        "secao": "10.5",
+        "titulo": "DIÁRIA DE PERMANÊNCIA A MAIOR\n \nA D",
+        "pagina": 30,
+        "relevancia": 0.587
+      },
+      {
+        "secao": "35",
+        "titulo": "TRATAMENTO EM REABILITAÇÃO\n \nT",
+        "pagina": 56,
+        "relevancia": 0.58
+      },
+      {
+        "secao": "5.8",
+        "titulo": "PACIENTE SOB CUIDADOS PROLONGADOS, PSIQUIATRIA, REABILITAÇÃO E \nTUBERCULOSE. \n \nQ",
+        "pagina": 15,
+        "relevancia": 0.575
+      }
+    ]
+  },
+  {
+    "numero": 129,
+    "codigo": "060194",
+    "nome": "Quantidade superior ao máximo permitido (dias internação na competência * 3)",
+    "secoes_manual": [
+      {
+        "secao": "12",
+        "titulo": "QUANTIDADE MÁXIMA DE PROCEDIMENTOS POR AIH\n \nS",
+        "pagina": 31,
+        "relevancia": 0.698
+      },
+      {
+        "secao": "4.7.1",
+        "titulo": "VALIDADE DA AIH \nA",
+        "pagina": 13,
+        "relevancia": 0.567
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.565
+      }
+    ]
+  },
+  {
+    "numero": 130,
+    "codigo": "060196",
+    "nome": "Quantidade superior ao máximo permitido (dias internação na competência * 5)",
+    "secoes_manual": [
+      {
+        "secao": "12",
+        "titulo": "QUANTIDADE MÁXIMA DE PROCEDIMENTOS POR AIH\n \nS",
+        "pagina": 31,
+        "relevancia": 0.71
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.573
+      },
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.572
+      }
+    ]
+  },
+  {
+    "numero": 131,
+    "codigo": "060192",
+    "nome": "Quantidade superior ao máximo permitido (tempo de permanência * 3)",
+    "secoes_manual": [
+      {
+        "secao": "57.1",
+        "titulo": "PERMANÊNCIA MENOR \n \nQ",
+        "pagina": 85,
+        "relevancia": 0.694
+      },
+      {
+        "secao": "10.5",
+        "titulo": "DIÁRIA DE PERMANÊNCIA A MAIOR\n \nA D",
+        "pagina": 30,
+        "relevancia": 0.677
+      },
+      {
+        "secao": "63.1",
+        "titulo": "MÉDIA DE PERMANÊNCIA \nQ",
+        "pagina": 73,
+        "relevancia": 0.67
+      }
+    ]
+  },
+  {
+    "numero": 132,
+    "codigo": "050096",
+    "nome": "Período de internação superior ao permitido p/AIH tipo 1",
+    "secoes_manual": [
+      {
+        "secao": "4.4",
+        "titulo": "EMISSÃO DA AIH \nE",
+        "pagina": 10,
+        "relevancia": 0.641
+      },
+      {
+        "secao": "4.4.3",
+        "titulo": "NUMERAÇÃO DE AIH \n \nN",
+        "pagina": 11,
+        "relevancia": 0.606
+      },
+      {
+        "secao": "58.5",
+        "titulo": "DUPLICIDADE DE CNS \n  \n            N",
+        "pagina": 88,
+        "relevancia": 0.603
+      }
+    ]
+  },
+  {
+    "numero": 133,
+    "codigo": "060139",
+    "nome": "OPM incompatível com procedimento realizado",
+    "secoes_manual": [
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.609
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.603
+      },
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.59
+      }
+    ]
+  },
+  {
+    "numero": 134,
+    "codigo": "060016",
+    "nome": "Procedimento realizado incompatível com procedimento principal",
+    "secoes_manual": [
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.658
+      },
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.573
+      },
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.569
+      }
+    ]
+  },
+  {
+    "numero": 135,
+    "codigo": "060135",
+    "nome": "Ordenação incorreta de procedimentos",
+    "secoes_manual": [
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \nN",
+        "pagina": 13,
+        "relevancia": 0.623
+      },
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.609
+      },
+      {
+        "secao": "27.5",
+        "titulo": "ANESTESIA REALIZADA PELO CIRURGIÃO \nC",
+        "pagina": 36,
+        "relevancia": 0.576
+      }
+    ]
+  },
+  {
+    "numero": 136,
+    "codigo": "060136",
+    "nome": "OPM incompatível com procedimento principal",
+    "secoes_manual": [
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.452
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.451
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.379
+      }
+    ]
+  },
+  {
+    "numero": 137,
+    "codigo": "060137",
+    "nome": "Procedimento realizado incompatível com cirurgia relacionada",
+    "secoes_manual": [
+      {
+        "secao": "42.1",
+        "titulo": "ORIENTAÇÕES GERAIS SOBRE A PORTARIA",
+        "pagina": 68,
+        "relevancia": 0.681
+      },
+      {
+        "secao": "43",
+        "titulo": "Página 43",
+        "pagina": 43,
+        "relevancia": 0.641
+      },
+      {
+        "secao": "8.4",
+        "titulo": "DE CIRURGIA PARA CIRURGIA \n \nN",
+        "pagina": 20,
+        "relevancia": 0.612
+      }
+    ]
+  },
+  {
+    "numero": 138,
+    "codigo": "060138",
+    "nome": "Procedimento especial incompatível com procedimento principal",
+    "secoes_manual": [
+      {
+        "secao": "8.7",
+        "titulo": "TRAQUEOSTOMIA \n \n                    P",
+        "pagina": 21,
+        "relevancia": 0.575
+      },
+      {
+        "secao": "63.7",
+        "titulo": "DEFINIÇÃO DE PROCEDIMENTO PRINCIPAL, ESPECIAL E SECUNDÁRIO \nP",
+        "pagina": 75,
+        "relevancia": 0.544
+      },
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \nN",
+        "pagina": 13,
+        "relevancia": 0.534
+      }
+    ]
+  },
+  {
+    "numero": 139,
+    "codigo": "060206",
+    "nome": "OPM incompatível com procedimento especial",
+    "secoes_manual": [
+      {
+        "secao": "12.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \n \nC",
+        "pagina": 33,
+        "relevancia": 0.437
+      },
+      {
+        "secao": "16.1",
+        "titulo": "QUANTIDADE MÁXIMA DE OPM POR PROCEDIMENTO E COMPATIBILIDADES \nC",
+        "pagina": 29,
+        "relevancia": 0.435
+      },
+      {
+        "secao": "22.6",
+        "titulo": "ANESTESIA/ANALGESIA OBSTÉTRICA/PARTO NORMAL E CESARIANA \n \nO",
+        "pagina": 40,
+        "relevancia": 0.383
+      }
+    ]
+  },
+  {
+    "numero": 140,
+    "codigo": "000003",
+    "nome": "Profissional com mais de 2 vínculos públicos (desacordo com CF-88) ou profissional com CH maior que 168h por semana",
+    "secoes_manual": [
+      {
+        "secao": "63.6",
+        "titulo": "REJEIÇÃO DE AIH POR QUANTIDADE DE DIÁRIAS SUPERIOR À CAPACIDADE INSTALADA \nA",
+        "pagina": 74,
+        "relevancia": 0.537
+      },
+      {
+        "secao": "59.1",
+        "titulo": "POR QUANTIDADE DE DIÁRIAS SUPERIOR À CAPACIDADE INSTALADA \n \nA",
+        "pagina": 88,
+        "relevancia": 0.496
+      },
+      {
+        "secao": "12",
+        "titulo": "QUANTIDADE MÁXIMA DE PROCEDIMENTOS POR AIH\n \nS",
+        "pagina": 31,
+        "relevancia": 0.486
+      }
+    ]
+  },
+  {
+    "numero": 141,
+    "codigo": "060055",
+    "nome": "Terceiro não possui serviço/classificação exigido",
+    "secoes_manual": [
+      {
+        "secao": "63.5",
+        "titulo": "MÉDIA DE PERMANÊNCIA, IDADE E QUANTIDADE \nO",
+        "pagina": 74,
+        "relevancia": 0.381
+      },
+      {
+        "secao": "16",
+        "titulo": "Página 16",
+        "pagina": 16,
+        "relevancia": 0.377
+      },
+      {
+        "secao": "18",
+        "titulo": "Página 18",
+        "pagina": 18,
+        "relevancia": 0.377
+      }
+    ]
+  },
+  {
+    "numero": 142,
+    "codigo": "060142",
+    "nome": "Subfaturamento por ordenação incorreta de procedimentos",
+    "secoes_manual": [
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \nN",
+        "pagina": 13,
+        "relevancia": 0.618
+      },
+      {
+        "secao": "8.6",
+        "titulo": "MAIS DE UM PROCEDIMENTO PRINCIPAL NUMA MESMA AIH \nN",
+        "pagina": 18,
+        "relevancia": 0.608
+      },
+      {
+        "secao": "5.5",
+        "titulo": "DE OBSTETRÍCIA PARA CLÍNICA MÉDICA \n \nN",
+        "pagina": 14,
+        "relevancia": 0.596
+      }
+    ]
+  }
+]
