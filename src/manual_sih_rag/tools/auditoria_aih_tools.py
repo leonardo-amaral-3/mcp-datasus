@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Callable
 
-from . import _erro, _json, _resolver_comp
+from . import _erro, _json, _norm_proc, _resolver_comp
 
 if TYPE_CHECKING:
     from mcp.server.fastmcp import FastMCP
@@ -55,6 +55,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             procedimentos_secundarios: Codigos separados por virgula. Ex: '0301010072,0415020018'.
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         client = get_client()
         comp_s = _resolver_comp(client, competencia, "SIGTAP")
         comp_c = _resolver_comp(client, competencia, "CNES")
@@ -227,7 +228,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
         # 9. Procedimentos secundarios compativeis
         if procedimentos_secundarios:
             sec_codes = [
-                s.strip()
+                _norm_proc(s.strip())
                 for s in procedimentos_secundarios.split(",")
                 if s.strip()
             ]
@@ -291,6 +292,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_cnes: Codigo CNES (7 digitos) para calcular incrementos. Opcional.
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         client = get_client()
         comp_s = _resolver_comp(client, competencia, "SIGTAP")
 

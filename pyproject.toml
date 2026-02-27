@@ -21,7 +21,7 @@ dependencies = [
 where = ["src"]
 
 [tool.setuptools]
-py-modules = ["consulta_manual", "extrair_manual", "indexar_manual", "validar_critica", "analisar_critica", "mapear_criticas", "agente", "busca_hibrida", "avaliar_rag", "validar_resposta", "mcp_server", "s3_client", "sigtap_client", "cnes_client"]
+py-modules = ["consulta_manual", "extrair_manual", "validar_critica", "analisar_critica", "busca_hibrida", "validar_resposta", "mcp_server", "s3_client", "sigtap_client", "cnes_client"]
 
 [project.scripts]
 manual-sih = "consulta_manual:main"

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Callable
 
-from . import _erro, _json, _resolver_comp
+from . import _erro, _json, _norm_proc, _resolver_comp
 
 if TYPE_CHECKING:
     from mcp.server.fastmcp import FastMCP
@@ -106,6 +106,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             competencia_a: Competencia anterior (AAAAMM). Ex: '202501'.
             competencia_b: Competencia posterior (AAAAMM). Ex: '202602'.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         client = get_client()
 
         proc_a = client.sigtap.procedimentos.get_by_id(

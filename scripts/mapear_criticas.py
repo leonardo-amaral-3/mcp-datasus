@@ -8,15 +8,18 @@ import re
 import sys
 from pathlib import Path
 
+_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / "src"))
+sys.path.insert(0, str(_ROOT))
+
 import chromadb
 from rich.console import Console
 from rich.table import Table
 from sentence_transformers import SentenceTransformer
 
-console = Console()
+from manual_sih_rag.criticas.paths import CRITICAS_TS
 
-# Extrair críticas do arquivo TypeScript
-CRITICAS_TS = Path(__file__).parent.parent.parent / "processos-criticas" / "src" / "constants" / "criticas.ts"
+console = Console()
 
 
 def extrair_criticas_do_ts() -> list[dict]:
@@ -137,7 +140,7 @@ def main():
     console.print(f"  {len(criticas)} críticas encontradas\n")
 
     # 2. Carregar sistema RAG
-    db_dir = Path(__file__).parent / "db"
+    db_dir = _ROOT / "db"
     if not db_dir.exists():
         console.print("[red]Banco vetorial não encontrado. Execute setup.sh primeiro.[/red]")
         sys.exit(1)
@@ -174,7 +177,7 @@ def main():
     console.print(table)
 
     # 5. Salvar JSON
-    output_dir = Path(__file__).parent / "data"
+    output_dir = _ROOT / "data"
     output_dir.mkdir(exist_ok=True)
     output_path = output_dir / "mapeamento_criticas_manual.json"
 

@@ -10,6 +10,10 @@ import pickle
 import sys
 from pathlib import Path
 
+_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / "src"))
+sys.path.insert(0, str(_ROOT))
+
 import chromadb
 from sentence_transformers import SentenceTransformer
 
@@ -17,9 +21,9 @@ from sentence_transformers import SentenceTransformer
 def construir_bm25(chunks: list[dict], data_dir: Path):
     """Constrói índice BM25 a partir dos child chunks e salva em disco."""
     try:
-        from busca_hibrida import tokenizar_pt
+        from manual_sih_rag.rag.search_primitives import tokenizar_pt
     except ImportError:
-        print("  Aviso: busca_hibrida.py não encontrado, pulando índice BM25.")
+        print("  Aviso: módulo search_primitives não encontrado, pulando índice BM25.")
         return
 
     from rank_bm25 import BM25Okapi
@@ -48,8 +52,8 @@ def construir_bm25(chunks: list[dict], data_dir: Path):
 
 
 def main():
-    data_dir = Path(__file__).parent / "data"
-    db_dir = Path(__file__).parent / "db"
+    data_dir = _ROOT / "data"
+    db_dir = _ROOT / "db"
 
     chunks_path = data_dir / "chunks.json"
     if not chunks_path.exists():

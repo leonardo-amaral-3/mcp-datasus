@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
-import json
 import unicodedata
 from typing import TYPE_CHECKING, Any, Callable
+
+from . import _erro, _json
 
 if TYPE_CHECKING:
     from mcp.server.fastmcp import FastMCP
@@ -31,7 +32,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
             n_resultados: Quantidade de resultados (1-10). Padrao: 5.
         """
         model, collection, _ = get_rag()
-        from consulta_manual import buscar
+        from manual_sih_rag.rag import buscar
 
         n = min(max(n_resultados, 1), 10)
         resultados = buscar(query, model, collection, n_resultados=n)
@@ -48,7 +49,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 "relevancia": f"{r['score']:.0%}",
                 "texto": texto,
             })
-        return json.dumps(saida, ensure_ascii=False, indent=2)
+        return _json(saida)
 
     @mcp.tool()
     def buscar_critica(numero: int) -> str:
@@ -62,11 +63,11 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
         _, collection, mapeamento = get_rag()
 
         if not mapeamento:
-            return json.dumps({"erro": "Mapeamento de criticas nao carregado."}, ensure_ascii=False)
+            return _erro("Mapeamento de criticas nao carregado.")
 
         entrada = next((m for m in mapeamento if m["numero"] == numero), None)
         if not entrada:
-            return json.dumps({"erro": f"Critica {numero} nao encontrada."}, ensure_ascii=False)
+            return _erro(f"Critica {numero} nao encontrada.")
 
         resultado = {
             "numero": entrada["numero"],
@@ -76,7 +77,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
         }
 
         try:
-            from validar_critica import ler_definicao_critica
+            from manual_sih_rag.criticas.validar import ler_definicao_critica
 
             defn = ler_definicao_critica(numero)
             if defn:
@@ -98,7 +99,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
             except Exception:
                 pass
 
-        return json.dumps(resultado, ensure_ascii=False, indent=2)
+        return _json(resultado)
 
     @mcp.tool()
     def listar_criticas(filtro: str = "") -> str:
@@ -116,7 +117,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
             for m in (mapeamento or [])
             if not filtro_lower or filtro_lower in m["nome"].lower()
         ]
-        return json.dumps(criticas, ensure_ascii=False, indent=2)
+        return _json(criticas)
 
     @mcp.tool()
     def buscar_por_secao(secao_numero: str) -> str:
@@ -134,10 +135,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
             include=["documents", "metadatas"],
         )
         if not docs["ids"]:
-            return json.dumps(
-                {"erro": f"Secao '{secao_numero}' nao encontrada."},
-                ensure_ascii=False,
-            )
+            return _erro(f"Secao '{secao_numero}' nao encontrada.")
 
         resultados = []
         for i in range(len(docs["ids"])):
@@ -151,7 +149,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 "fonte": meta.get("fonte", ""),
                 "texto": texto,
             })
-        return json.dumps(resultados, ensure_ascii=False, indent=2)
+        return _json(resultados)
 
     @mcp.tool()
     def verificar_citacao(secao_numero: str, verificar_texto: str = "") -> str:
@@ -172,18 +170,18 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 include=["documents", "metadatas"],
             )
         except Exception:
-            return json.dumps({
+            return _json({
                 "secao": secao_numero,
                 "encontrada": False,
                 "mensagem": f"Erro ao consultar secao '{secao_numero}'.",
-            }, ensure_ascii=False)
+            })
 
         if not docs["ids"]:
-            return json.dumps({
+            return _json({
                 "secao": secao_numero,
                 "encontrada": False,
                 "mensagem": f"Secao '{secao_numero}' nao encontrada no manual indexado.",
-            }, ensure_ascii=False)
+            })
 
         meta = docs["metadatas"][0]
         texto_completo = "\n".join(docs["documents"])
@@ -212,7 +210,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 _normalizar(verificar_texto) in _normalizar(texto_completo)
             )
 
-        return json.dumps(resultado, ensure_ascii=False, indent=2)
+        return _json(resultado)
 
     @mcp.tool()
     def extrair_dados_aih(texto: str) -> str:
@@ -223,7 +221,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
         Args:
             texto: Texto completo do espelho de AIH copiado do sistema.
         """
-        from consulta_manual import extrair_dados_aih as _extrair
+        from manual_sih_rag.rag import extrair_dados_aih as _extrair
 
         dados = _extrair(texto)
         if dados.get("procedimento_principal"):
@@ -232,7 +230,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
         if dados.get("diagnostico_principal"):
             cid, nome = dados["diagnostico_principal"]
             dados["diagnostico_principal"] = {"cid": cid, "nome": nome}
-        return json.dumps(dados, ensure_ascii=False, indent=2)
+        return _json(dados)
 
     @mcp.tool()
     def ler_codigo_critica(numero: int) -> str:
@@ -244,15 +242,12 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
         Args:
             numero: Numero da critica (ex: 7, 92, 129).
         """
-        from validar_critica import ler_codigo_critica as _ler
-        from validar_critica import extrair_logica_hasCritica
+        from manual_sih_rag.criticas.validar import ler_codigo_critica as _ler
+        from manual_sih_rag.criticas.validar import extrair_logica_hasCritica
 
         codigo = _ler(numero)
         if not codigo:
-            return json.dumps(
-                {"erro": f"Arquivo critica{numero}.ts nao encontrado."},
-                ensure_ascii=False,
-            )
+            return _erro(f"Arquivo critica{numero}.ts nao encontrado.")
         return extrair_logica_hasCritica(codigo)
 
     @mcp.tool()
@@ -267,7 +262,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
         """
         model, collection, _ = get_rag()
 
-        from validar_critica import (
+        from manual_sih_rag.criticas.validar import (
             buscar_manual as _buscar_manual,
             extrair_logica_hasCritica,
             extrair_termos_busca,
@@ -277,10 +272,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
 
         definicao = ler_definicao_critica(numero)
         if not definicao:
-            return json.dumps(
-                {"erro": f"Critica {numero} nao encontrada."},
-                ensure_ascii=False,
-            )
+            return _erro(f"Critica {numero} nao encontrada.")
 
         codigo = _ler_codigo(numero)
         logica = extrair_logica_hasCritica(codigo) if codigo else ""
@@ -302,7 +294,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 for s in secoes[:5]
             ],
         }
-        return json.dumps(resultado, ensure_ascii=False, indent=2)
+        return _json(resultado)
 
     @mcp.tool()
     def listar_fontes() -> str:
@@ -328,7 +320,7 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 "tipo": meta.get("tipo", "?"),
                 "ano": meta.get("ano", "?"),
             })
-        return json.dumps(resultado, ensure_ascii=False, indent=2)
+        return _json(resultado)
 
     @mcp.tool()
     def listar_secoes() -> str:
@@ -353,4 +345,4 @@ def register(mcp: "FastMCP", get_rag: RAGLoader) -> None:
                 "titulo": meta.get("titulo", "").split("\n")[0].strip(),
                 "pagina": meta.get("pagina"),
             })
-        return json.dumps(resultado, ensure_ascii=False, indent=2)
+        return _json(resultado)

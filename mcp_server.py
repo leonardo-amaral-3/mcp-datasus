@@ -69,7 +69,7 @@ _rag_state: dict = {
 def _get_rag():
     """Lazy-load do sistema RAG (model + collection + mapeamento)."""
     if not _rag_state["loaded"]:
-        from consulta_manual import carregar_sistema
+        from manual_sih_rag.rag import carregar_sistema
 
         _rag_state["model"], _rag_state["collection"] = carregar_sistema()
         mapeamento_path = _BASE / "data" / "mapeamento_criticas_manual.json"

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Callable
 
-from . import _erro, _json, _resolver_comp
+from . import _erro, _json, _norm_proc, _resolver_comp
 
 if TYPE_CHECKING:
     from mcp.server.fastmcp import FastMCP
@@ -34,6 +34,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_cnes: Codigo CNES (7 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp_s = _resolver_comp(c, competencia, "SIGTAP")
         comp_c = _resolver_comp(c, competencia, "CNES")
@@ -153,6 +154,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_cid: Codigo CID-10. Ex: 'I10', 'C50.9'.
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
 

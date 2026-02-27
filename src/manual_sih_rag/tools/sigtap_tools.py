@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Callable
 
-from . import _erro, _json, _resolver_comp
+from . import _erro, _json, _norm_proc, _resolver_comp
 
 if TYPE_CHECKING:
     from mcp.server.fastmcp import FastMCP
@@ -29,6 +29,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo: Codigo do procedimento (10 digitos). Ex: '0301010072'.
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo = _norm_proc(codigo)
         c = get_client()
         comp = _resolver_comp(c, competencia)
 
@@ -147,6 +148,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_cid.list_by_ids([codigo_procedimento], comp)
@@ -182,6 +184,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         compat = c.sigtap.rl_procedimento_compativel.list_by_procedimentos(
@@ -221,6 +224,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_habilitacao.list_by_ids([codigo_procedimento], comp)
@@ -252,6 +256,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_servico.list_by_ids([codigo_procedimento], comp)
@@ -289,6 +294,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_ocupacao.list_by_ids([codigo_procedimento], comp)
@@ -318,6 +324,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_leito.list_by_ids([codigo_procedimento], comp)
@@ -348,6 +355,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_incremento.list_by_ids([codigo_procedimento], comp)
@@ -411,6 +419,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         descr = c.sigtap.descricao.get_by_id(codigo_procedimento, comp)
@@ -434,6 +443,7 @@ def register(mcp: "FastMCP", get_client: Callable[[], "DatasusClient"]) -> None:
             codigo_procedimento: Codigo do procedimento (10 digitos).
             competencia: Competencia AAAAMM. Default: mais recente.
         """
+        codigo_procedimento = _norm_proc(codigo_procedimento)
         c = get_client()
         comp = _resolver_comp(c, competencia)
         rels = c.sigtap.rl_procedimento_regra_cond.list_by_ids([codigo_procedimento], comp)

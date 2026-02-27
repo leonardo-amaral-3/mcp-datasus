@@ -11,6 +11,11 @@ sem passar pelo pipeline hibrido, garantindo comparacao justa.
 import io
 import os
 import sys
+from pathlib import Path
+
+_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(_ROOT / "src"))
+sys.path.insert(0, str(_ROOT))
 
 import chromadb
 from rich.console import Console
@@ -269,9 +274,8 @@ def main():
     old_err = sys.stderr
     sys.stderr = io.StringIO()
     model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
-    from pathlib import Path
 
-    db_dir = Path(__file__).parent / "db"
+    db_dir = _ROOT / "db"
     client = chromadb.PersistentClient(path=str(db_dir))
     collection = client.get_collection("manual_sih")
     sys.stderr = old_err
@@ -287,11 +291,11 @@ def main():
     metricas_new = None
     buscar_hibrida_fn = None
     try:
-        from busca_hibrida import buscar_hibrida, carregar_sistema_hibrido
+        from manual_sih_rag.rag.hybrid_search import buscar_hibrida, carregar_sistema_hibrido
 
         console.print("[dim]Carregando sistema híbrido...[/dim]")
         carregar_sistema_hibrido(carregar_reranker=True)
-        from busca_hibrida import _bm25 as bm25_check
+        from manual_sih_rag.rag.hybrid_search import _bm25 as bm25_check
 
         if bm25_check is not None:
             buscar_hibrida_fn = buscar_hibrida

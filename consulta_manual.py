@@ -1,15 +1,14 @@
 """
-Sistema de consulta RAG para o Manual Técnico SIH/SUS.
+Sistema de consulta RAG para o Manual Tecnico SIH/SUS.
 Permite fazer perguntas em linguagem natural e recebe trechos relevantes do manual.
 
 Comandos especiais:
-  /explicar <N>    - Explica como a crítica N é validada (usa Gemini + RAG)
+  /explicar <N>    - Explica como a critica N e validada (usa Gemini + RAG)
   /aih             - Colar espelho de AIH e buscar regras relevantes no manual
   /aih analise     - Colar espelho de AIH e analisar com IA (Gemini)
-  /critica         - Modo validação de críticas (busca semântica)
+  /critica         - Modo validacao de criticas (busca semantica)
 """
 
-import io
 import os
 import re
 import sys
@@ -23,110 +22,17 @@ from rich.prompt import Prompt
 from rich.table import Table
 from sentence_transformers import SentenceTransformer
 
+# Re-exports from package (backward compat)
+from manual_sih_rag.rag import (  # noqa: F401
+    CRITICA_HINTS,
+    GRUPO_SIGTAP,
+    buscar,
+    carregar_sistema,
+    extrair_dados_aih,
+    ler_texto_multilinhas,
+)
+
 console = Console()
-
-# Mapeamento de críticas para termos de busca (exemplos comuns)
-CRITICA_HINTS = {
-    "critica 7": "procedimento principal incompatível com diagnóstico principal CID compatibilidade",
-    "critica 12": "diagnóstico principal incompatível com sexo do paciente",
-    "critica 13": "procedimento principal incompatível com idade do paciente",
-    "critica 14": "sexo do paciente incompatível com procedimento principal",
-    "critica 15": "procedimento principal não permite permanência",
-    "050009": "número da AIH não informado",
-    "050046": "procedimento principal incompatível com diagnóstico principal",
-    "050081": "diagnóstico principal incompatível com sexo",
-    "050083": "procedimento incompatível com idade",
-    "050084": "sexo incompatível com procedimento",
-    "050097": "procedimento não permite permanência",
-}
-
-
-def carregar_sistema():
-    """Carrega modelo e banco vetorial (com busca híbrida se disponível)."""
-    db_dir = Path(__file__).parent / "db"
-    chroma_host = os.getenv("CHROMA_HOST")
-
-    if not chroma_host and not db_dir.exists():
-        console.print(
-            "[red]Erro: Banco vetorial não encontrado. Execute primeiro:[/red]"
-        )
-        console.print("  python extrair_manual.py")
-        console.print("  python indexar_manual.py")
-        sys.exit(1)
-
-    # Tentar sistema híbrido primeiro
-    try:
-        from busca_hibrida import carregar_sistema_hibrido
-        console.print("[dim]Carregando sistema de busca híbrida...[/dim]")
-        model, collection = carregar_sistema_hibrido()
-        console.print(
-            f"[green]Sistema híbrido pronto! {collection.count()} trechos indexados.[/green]\n"
-        )
-        return model, collection
-    except (ImportError, Exception):
-        pass
-
-    # Fallback: sistema original
-    console.print("[dim]Carregando modelo de embeddings...[/dim]")
-    model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
-
-    console.print("[dim]Conectando ao banco vetorial...[/dim]")
-    chroma_host = os.getenv("CHROMA_HOST")
-    if chroma_host:
-        chroma_port = int(os.getenv("CHROMA_PORT", "8000"))
-        client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
-    else:
-        client = chromadb.PersistentClient(path=str(db_dir))
-    collection = client.get_collection("manual_sih")
-
-    console.print(
-        f"[green]Sistema pronto! {collection.count()} trechos indexados.[/green]\n"
-    )
-    return model, collection
-
-
-def buscar(
-    pergunta: str,
-    model: SentenceTransformer,
-    collection,
-    n_resultados: int = 5,
-) -> list[dict]:
-    """Busca trechos relevantes do manual para a pergunta."""
-    # Usar busca híbrida se disponível
-    try:
-        from busca_hibrida import buscar_hibrida, _bm25
-        if _bm25 is not None:
-            return buscar_hibrida(pergunta, model, collection, n_resultados)
-    except (ImportError, Exception):
-        pass
-
-    # Fallback: busca vetorial original
-    pergunta_lower = pergunta.lower().strip()
-    for chave, hint in CRITICA_HINTS.items():
-        if chave in pergunta_lower:
-            pergunta = f"{pergunta} {hint}"
-            break
-
-    embedding = model.encode([pergunta], normalize_embeddings=True)
-
-    resultados = collection.query(
-        query_embeddings=[embedding[0].tolist()],
-        n_results=n_resultados,
-        include=["documents", "metadatas", "distances"],
-    )
-
-    items = []
-    for i in range(len(resultados["ids"][0])):
-        items.append(
-            {
-                "id": resultados["ids"][0][i],
-                "texto": resultados["documents"][0][i],
-                "metadata": resultados["metadatas"][0][i],
-                "score": 1 - resultados["distances"][0][i],
-            }
-        )
-
-    return items
 
 
 def exibir_resultados(pergunta: str, resultados: list[dict]):
@@ -142,7 +48,7 @@ def exibir_resultados(pergunta: str, resultados: list[dict]):
         score = r["score"]
         cor = "green" if score > 0.5 else "yellow" if score > 0.3 else "red"
 
-        titulo = f"[{cor}]#{i+1}[/{cor}] Seção {meta['secao']} - {meta['titulo']} (p.{meta['pagina']}) [{cor}]relevância: {score:.0%}[/{cor}]"
+        titulo = f"[{cor}]#{i+1}[/{cor}] Secao {meta['secao']} - {meta['titulo']} (p.{meta['pagina']}) [{cor}]relevancia: {score:.0%}[/{cor}]"
 
         console.print(
             Panel(
@@ -157,19 +63,19 @@ def exibir_resultados(pergunta: str, resultados: list[dict]):
 def modo_validar_critica(
     model: SentenceTransformer, collection
 ):
-    """Modo especial para validar críticas contra o manual."""
+    """Modo especial para validar criticas contra o manual."""
     console.print(
         Panel(
-            "Digite o número ou código da crítica para ver qual seção do manual a fundamenta.\n"
+            "Digite o numero ou codigo da critica para ver qual secao do manual a fundamenta.\n"
             "Exemplos: 'critica 7', '050046', 'compatibilidade CID procedimento'",
-            title="[bold]Modo Validação de Críticas[/bold]",
+            title="[bold]Modo Validacao de Criticas[/bold]",
             border_style="cyan",
         )
     )
 
     while True:
         try:
-            entrada = Prompt.ask("\n[bold cyan]Crítica[/bold cyan]")
+            entrada = Prompt.ask("\n[bold cyan]Critica[/bold cyan]")
         except (KeyboardInterrupt, EOFError):
             break
 
@@ -177,11 +83,11 @@ def modo_validar_critica(
             break
 
         resultados = buscar(entrada, model, collection, n_resultados=3)
-        exibir_resultados(f"Fundamentação da {entrada}", resultados)
+        exibir_resultados(f"Fundamentacao da {entrada}", resultados)
 
 
 def carregar_api_key() -> str | None:
-    """Carrega a API key do Gemini (retorna None se não disponível)."""
+    """Carrega a API key do Gemini (retorna None se nao disponivel)."""
     key = os.environ.get("GEMINI_API_KEY")
     if key:
         return key
@@ -192,15 +98,15 @@ def carregar_api_key() -> str | None:
 
 
 def modo_explicar_critica(numero: int, model: SentenceTransformer, collection):
-    """Explica como uma crítica é validada usando Gemini + RAG + código."""
+    """Explica como uma critica e validada usando Gemini + RAG + codigo."""
     api_key = carregar_api_key()
     if not api_key:
-        console.print("[red]API key do Gemini não encontrada.[/red]")
+        console.print("[red]API key do Gemini nao encontrada.[/red]")
         console.print("[dim]Configure via GEMINI_API_KEY ou ~/.config/google/api_key[/dim]")
         return
 
     try:
-        from validar_critica import (
+        from manual_sih_rag.criticas.validar import (
             buscar_manual,
             extrair_logica_hasCritica,
             extrair_termos_busca,
@@ -208,24 +114,24 @@ def modo_explicar_critica(numero: int, model: SentenceTransformer, collection):
             ler_definicao_critica,
         )
     except ImportError:
-        console.print("[red]validar_critica.py não encontrado no mesmo diretório.[/red]")
+        console.print("[red]Modulo criticas nao encontrado.[/red]")
         return
 
     definicao = ler_definicao_critica(numero)
     if not definicao:
-        console.print(f"[red]Crítica {numero} não encontrada em criticas.ts[/red]")
+        console.print(f"[red]Critica {numero} nao encontrada em criticas.ts[/red]")
         return
 
     codigo = ler_codigo_critica(numero)
     if not codigo:
-        console.print(f"[red]Arquivo critica{numero}.ts não encontrado[/red]")
+        console.print(f"[red]Arquivo critica{numero}.ts nao encontrado[/red]")
         return
 
     console.print(
         Panel(
             f"[bold cyan]{definicao['nome']}[/bold cyan]\n"
-            f"Código SIH: [bold]{definicao['codigo']}[/bold]",
-            title=f"[bold blue]Explicando Crítica {numero}[/bold blue]",
+            f"Codigo SIH: [bold]{definicao['codigo']}[/bold]",
+            title=f"[bold blue]Explicando Critica {numero}[/bold blue]",
             border_style="blue",
         )
     )
@@ -243,16 +149,16 @@ def modo_explicar_critica(numero: int, model: SentenceTransformer, collection):
         )
 
     prompt = f"""\
-Explique de forma clara e didática como funciona a validação da crítica {numero} ({definicao['nome']}) do SIH/SUS.
+Explique de forma clara e didatica como funciona a validacao da critica {numero} ({definicao['nome']}) do SIH/SUS.
 
 Estruture assim:
-1. **O que essa crítica verifica** (em linguagem simples)
-2. **Passo a passo da validação** (como o sistema decide se gera ou não a crítica)
-3. **Campos envolvidos** (quais dados da AIH são verificados)
-4. **Exceções** (casos em que a crítica NÃO é gerada mesmo quando a condição é atendida)
-5. **Fundamentação** (o que o manual SIH/SUS diz sobre isso)
+1. **O que essa critica verifica** (em linguagem simples)
+2. **Passo a passo da validacao** (como o sistema decide se gera ou nao a critica)
+3. **Campos envolvidos** (quais dados da AIH sao verificados)
+4. **Excecoes** (casos em que a critica NAO e gerada mesmo quando a condicao e atendida)
+5. **Fundamentacao** (o que o manual SIH/SUS diz sobre isso)
 
-## Código da crítica (TypeScript)
+## Codigo da critica (TypeScript)
 ```typescript
 {logica}
 ```
@@ -260,7 +166,7 @@ Estruture assim:
 ## Trechos do Manual SIH/SUS
 {secoes_texto}
 
-Responda em português. Seja técnico mas acessível.\
+Responda em portugues. Seja tecnico mas acessivel.\
 """
 
     from google import genai
@@ -270,12 +176,12 @@ Responda em português. Seja técnico mas acessível.\
     chat = client.chats.create(
         model="gemini-2.0-flash",
         config=genai_types.GenerateContentConfig(
-            system_instruction="Você é um especialista em faturamento hospitalar SIH/SUS. Explique regras de validação de forma clara e técnica.",
+            system_instruction="Voce e um especialista em faturamento hospitalar SIH/SUS. Explique regras de validacao de forma clara e tecnica.",
             max_output_tokens=3000,
         ),
     )
 
-    console.print("[dim]Gerando explicação...[/dim]\n")
+    console.print("[dim]Gerando explicacao...[/dim]\n")
     resposta = ""
     for chunk in chat.send_message_stream(prompt):
         if chunk.text:
@@ -284,127 +190,20 @@ Responda em português. Seja técnico mas acessível.\
     console.print()
 
     # Follow-up interativo
-    console.print("\n[dim]Pergunte mais sobre esta crítica, ou 'sair' para voltar.[/dim]")
+    console.print("\n[dim]Pergunte mais sobre esta critica, ou 'sair' para voltar.[/dim]")
     while True:
         try:
-            pergunta = Prompt.ask(f"\n[cyan]Crítica {numero}[/cyan]")
+            pergunta = Prompt.ask(f"\n[cyan]Critica {numero}[/cyan]")
         except (KeyboardInterrupt, EOFError):
             break
         if pergunta.lower() in ("sair", "exit", "quit", "q", ""):
             break
 
-        resposta_fu = ""
         console.print()
         for chunk in chat.send_message_stream(pergunta):
             if chunk.text:
-                resposta_fu += chunk.text
                 console.print(chunk.text, end="", highlight=False)
         console.print()
-
-
-GRUPO_SIGTAP = {
-    "01": "ações de promoção e prevenção",
-    "02": "procedimentos diagnósticos (exames)",
-    "03": "procedimentos clínicos (consultas, fisioterapia)",
-    "04": "procedimentos cirúrgicos",
-    "05": "transplantes de órgãos tecidos e células",
-    "06": "medicamentos",
-    "07": "órteses próteses e materiais especiais (OPM)",
-    "08": "ações complementares (UTI, diárias)",
-}
-
-
-def ler_texto_multilinhas() -> str:
-    """Lê entrada multilinha até o usuário digitar /fim."""
-    console.print(
-        "[dim]Cole o espelho da AIH. Quando terminar, digite "
-        "[bold]/fim[/bold] em uma nova linha.[/dim]"
-    )
-    linhas = []
-    while True:
-        try:
-            linha = input()
-            if linha.strip().lower() == "/fim":
-                break
-            linhas.append(linha)
-        except (EOFError, KeyboardInterrupt):
-            break
-    return "\n".join(linhas)
-
-
-def extrair_dados_aih(texto: str) -> dict:
-    """Extrai dados estruturados de um espelho de AIH colado."""
-    dados = {
-        "num_aih": None,
-        "procedimento_principal": None,
-        "diagnostico_principal": None,
-        "cids_secundarios": [],
-        "procedimentos_unicos": [],
-        "especialidade": None,
-        "carater": None,
-        "motivo_saida": None,
-        "tipo": None,
-    }
-
-    # Num AIH
-    m = re.search(r"Num\s+AIH\s*:\s*([\d-]+)", texto)
-    if m:
-        dados["num_aih"] = m.group(1).strip()
-
-    # Tipo
-    m = re.search(r"Tipo\s*:\s*\d+-(\S+)", texto)
-    if m:
-        dados["tipo"] = m.group(1).strip()
-
-    # Procedimento principal: XX.XX.XX.XXX-X - NOME
-    m = re.search(
-        r"[Pp]rocedimento\s+principal\s*:\s*([\d.]+\d-\d)\s*-\s*(.+)", texto
-    )
-    if m:
-        codigo = re.sub(r"[.\-]", "", m.group(1))
-        dados["procedimento_principal"] = (codigo, m.group(2).strip())
-
-    # Diagnóstico principal
-    m = re.search(r"[Dd]iag\.\s*principal\s*:\s*([A-Z]\d{2,4})\s*-?\s*(.*)", texto)
-    if m:
-        dados["diagnostico_principal"] = (m.group(1), m.group(2).strip())
-
-    # Especialidade
-    m = re.search(r"[Ee]specialidade\s*:\s*\d+\s*-\s*(.+)", texto)
-    if m:
-        dados["especialidade"] = m.group(1).strip()
-
-    # Caráter atendimento
-    m = re.search(r"[Cc]arater\s+atendimento\s*:\s*\d+\s*-\s*(.+)", texto)
-    if m:
-        dados["carater"] = m.group(1).strip()
-
-    # Motivo saída
-    m = re.search(r"[Mm]ot\s*saida\s*:\s*\d+\s*-\s*(.+)", texto)
-    if m:
-        dados["motivo_saida"] = m.group(1).strip()
-
-    # Procedimentos realizados (10 dígitos começando com 0)
-    procs_vistos = set()
-    for m in re.finditer(r"\b(0[1-8]\d{8})\b", texto):
-        cod = m.group(1)
-        if cod not in procs_vistos:
-            procs_vistos.add(cod)
-            dados["procedimentos_unicos"].append(cod)
-
-    # CIDs secundários - seção específica
-    cid_section = re.search(
-        r"CID\s+SECUND[ÁA]RIO(.*?)(?:CNPJ\s+Fabricante|MS-DATASUS|$)",
-        texto,
-        re.DOTALL | re.IGNORECASE,
-    )
-    if cid_section:
-        for m in re.finditer(r"\b([A-Z]\d{3})\b", cid_section.group(1)):
-            cid = m.group(1)
-            if cid not in dados["cids_secundarios"]:
-                dados["cids_secundarios"].append(cid)
-
-    return dados
 
 
 def modo_analisar_aih(model, collection, usar_ia: bool = False):
@@ -413,7 +212,7 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
         Panel(
             "[bold]Cole o espelho da AIH abaixo.[/bold]\n"
             "Quando terminar, digite [bold cyan]/fim[/bold cyan] em uma nova linha.",
-            title="[bold blue]Análise de AIH[/bold blue]",
+            title="[bold blue]Analise de AIH[/bold blue]",
             border_style="blue",
         )
     )
@@ -430,7 +229,7 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
 
     dados = extrair_dados_aih(texto)
 
-    # Exibir dados extraídos
+    # Exibir dados extraidos
     info_lines = []
     if dados["num_aih"]:
         info_lines.append(f"AIH: [bold]{dados['num_aih']}[/bold]")
@@ -445,12 +244,12 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
     if dados["especialidade"]:
         info_lines.append(f"Especialidade: {dados['especialidade']}")
     if dados["carater"]:
-        info_lines.append(f"Caráter: {dados['carater']}")
+        info_lines.append(f"Carater: {dados['carater']}")
     if dados["motivo_saida"]:
-        info_lines.append(f"Motivo Saída: {dados['motivo_saida']}")
+        info_lines.append(f"Motivo Saida: {dados['motivo_saida']}")
 
     procs = dados["procedimentos_unicos"]
-    info_lines.append(f"Procedimentos únicos: [bold]{len(procs)}[/bold]")
+    info_lines.append(f"Procedimentos unicos: [bold]{len(procs)}[/bold]")
 
     # Agrupar por grupo SIGTAP
     grupos = {}
@@ -464,13 +263,13 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
 
     if dados["cids_secundarios"]:
         info_lines.append(
-            f"CIDs secundários: {', '.join(dados['cids_secundarios'])}"
+            f"CIDs secundarios: {', '.join(dados['cids_secundarios'])}"
         )
 
     console.print(
         Panel(
             "\n".join(info_lines),
-            title="[bold cyan]Dados Extraídos[/bold cyan]",
+            title="[bold cyan]Dados Extraidos[/bold cyan]",
             border_style="cyan",
         )
     )
@@ -484,7 +283,7 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
 
     if dados["diagnostico_principal"]:
         cid, nome = dados["diagnostico_principal"]
-        queries.append(f"diagnóstico {cid} {nome} compatibilidade procedimento CID")
+        queries.append(f"diagnostico {cid} {nome} compatibilidade procedimento CID")
 
     if dados["procedimento_principal"] and dados["diagnostico_principal"]:
         _, nome_proc = dados["procedimento_principal"]
@@ -493,32 +292,29 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
 
     if dados["especialidade"]:
         queries.append(
-            f"especialidade {dados['especialidade']} AIH regras validação internação"
+            f"especialidade {dados['especialidade']} AIH regras validacao internacao"
         )
 
     if dados["carater"]:
-        queries.append(f"caráter atendimento {dados['carater']} AIH regras")
+        queries.append(f"carater atendimento {dados['carater']} AIH regras")
 
     if dados["motivo_saida"]:
-        queries.append(f"motivo saída {dados['motivo_saida']} AIH regras")
+        queries.append(f"motivo saida {dados['motivo_saida']} AIH regras")
 
-    # Buscar por grupos de procedimentos
     for g in sorted(grupos):
         nome_g = GRUPO_SIGTAP.get(g, f"grupo {g}")
         queries.append(
             f"procedimentos {nome_g} grupo {g} SIGTAP AIH regras quantidade limite"
         )
 
-    # CIDs
     if dados["cids_secundarios"]:
         queries.append(
-            f"CID secundário {' '.join(dados['cids_secundarios'][:4])} "
+            f"CID secundario {' '.join(dados['cids_secundarios'][:4])} "
             "causas externas politraumatismo"
         )
 
     console.print(f"\n[dim]Executando {len(queries)} buscas no manual...[/dim]\n")
 
-    # Executar buscas deduplicando resultados
     vistos = set()
     todos_resultados = []
 
@@ -529,10 +325,8 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
                 vistos.add(r["id"])
                 todos_resultados.append((q, r))
 
-    # Ordenar por relevância
     todos_resultados.sort(key=lambda x: x[1]["score"], reverse=True)
 
-    # Exibir top resultados
     top = todos_resultados[:12]
     console.print(
         f"[bold cyan]Top {len(top)} trechos mais relevantes "
@@ -546,7 +340,7 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
 
         titulo = (
             f"[{cor}]#{i+1}[/{cor}] {meta['secao']} - {meta['titulo']} "
-            f"(p.{meta['pagina']}) [{cor}]relevância: {score:.0%}[/{cor}]"
+            f"(p.{meta['pagina']}) [{cor}]relevancia: {score:.0%}[/{cor}]"
         )
         subtitle = f"[dim]Busca: {query[:80]}[/dim]"
 
@@ -560,13 +354,11 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
             )
         )
 
-    # Se IA habilitada, analisar com Gemini
     if usar_ia:
         _analisar_aih_com_ia(dados, todos_resultados)
 
-    # Modo follow-up
     console.print(
-        "\n[dim]Faça perguntas sobre esta AIH, ou 'sair' para voltar.[/dim]"
+        "\n[dim]Faca perguntas sobre esta AIH, ou 'sair' para voltar.[/dim]"
     )
     while True:
         try:
@@ -581,34 +373,33 @@ def modo_analisar_aih(model, collection, usar_ia: bool = False):
 
 
 def _analisar_aih_com_ia(dados: dict, resultados: list):
-    """Analisa a AIH com Gemini usando os dados extraídos + trechos do manual."""
+    """Analisa a AIH com Gemini usando os dados extraidos + trechos do manual."""
     api_key = carregar_api_key()
     if not api_key:
         console.print(
-            "[yellow]API key não disponível. Pulando análise por IA.[/yellow]"
+            "[yellow]API key nao disponivel. Pulando analise por IA.[/yellow]"
         )
         return
 
     from google import genai
     from google.genai import types as genai_types
 
-    # Montar contexto
     info = []
     if dados["procedimento_principal"]:
         cod, nome = dados["procedimento_principal"]
         info.append(f"Procedimento Principal: {cod} - {nome}")
     if dados["diagnostico_principal"]:
         cid, nome = dados["diagnostico_principal"]
-        info.append(f"Diagnóstico Principal: {cid} - {nome}")
+        info.append(f"Diagnostico Principal: {cid} - {nome}")
     if dados["especialidade"]:
         info.append(f"Especialidade: {dados['especialidade']}")
     if dados["carater"]:
-        info.append(f"Caráter: {dados['carater']}")
+        info.append(f"Carater: {dados['carater']}")
     if dados["motivo_saida"]:
-        info.append(f"Motivo Saída: {dados['motivo_saida']}")
+        info.append(f"Motivo Saida: {dados['motivo_saida']}")
     info.append(f"Procedimentos: {', '.join(dados['procedimentos_unicos'])}")
     if dados["cids_secundarios"]:
-        info.append(f"CIDs Secundários: {', '.join(dados['cids_secundarios'])}")
+        info.append(f"CIDs Secundarios: {', '.join(dados['cids_secundarios'])}")
 
     secoes_texto = ""
     for i, (query, r) in enumerate(resultados[:8]):
@@ -620,7 +411,7 @@ def _analisar_aih_com_ia(dados: dict, resultados: list):
         )
 
     prompt = f"""\
-Analise esta AIH e identifique potenciais problemas de validação (críticas SIH/SUS).
+Analise esta AIH e identifique potenciais problemas de validacao (criticas SIH/SUS).
 
 ## Dados da AIH
 {chr(10).join(info)}
@@ -629,35 +420,32 @@ Analise esta AIH e identifique potenciais problemas de validação (críticas SI
 {secoes_texto}
 
 Identifique:
-1. **Compatibilidades** - procedimento x diagnóstico, procedimento x sexo, procedimento x idade
+1. **Compatibilidades** - procedimento x diagnostico, procedimento x sexo, procedimento x idade
 2. **Quantidades** - limites de quantidade por procedimento
-3. **Regras de permanência** - diárias, UTI, mudança de procedimento
-4. **OPM** - compatibilidade de materiais com procedimento cirúrgico
-5. **Outros** - qualquer regra relevante que possa gerar crítica
+3. **Regras de permanencia** - diarias, UTI, mudanca de procedimento
+4. **OPM** - compatibilidade de materiais com procedimento cirurgico
+5. **Outros** - qualquer regra relevante que possa gerar critica
 
-Seja específico sobre quais críticas poderiam ser geradas e por quê.
-Responda em português.\
+Seja especifico sobre quais criticas poderiam ser geradas e por que.
+Responda em portugues.\
 """
 
     client = genai.Client(api_key=api_key)
     chat = client.chats.create(
         model="gemini-2.0-flash",
         config=genai_types.GenerateContentConfig(
-            system_instruction="Você é um especialista em faturamento hospitalar SIH/SUS. "
-            "Analise AIHs e identifique potenciais problemas de validação.",
+            system_instruction="Voce e um especialista em faturamento hospitalar SIH/SUS. "
+            "Analise AIHs e identifique potenciais problemas de validacao.",
             max_output_tokens=4000,
         ),
     )
 
     console.print("\n[dim]Analisando AIH com IA...[/dim]\n")
-    resposta = ""
     for chunk in chat.send_message_stream(prompt):
         if chunk.text:
-            resposta += chunk.text
             console.print(chunk.text, end="", highlight=False)
     console.print()
 
-    # Follow-up com IA
     console.print(
         "\n[dim]Pergunte mais sobre esta AIH (com IA), ou 'sair' para voltar.[/dim]"
     )
@@ -669,11 +457,9 @@ Responda em português.\
         if pergunta.lower() in ("sair", "exit", "quit", "q", ""):
             break
 
-        resposta_fu = ""
         console.print()
         for chunk in chat.send_message_stream(pergunta):
             if chunk.text:
-                resposta_fu += chunk.text
                 console.print(chunk.text, end="", highlight=False)
         console.print()
 
@@ -682,15 +468,15 @@ def modo_interativo(model: SentenceTransformer, collection):
     """Modo de consulta interativa."""
     console.print(
         Panel(
-            "[bold]Comandos disponíveis:[/bold]\n\n"
+            "[bold]Comandos disponiveis:[/bold]\n\n"
             "  [cyan]<pergunta>[/cyan]       - Buscar no manual (ex: 'como registrar politraumatizado')\n"
-            "  [cyan]/explicar N[/cyan]      - Explicar como a crítica N é validada (usa IA)\n"
+            "  [cyan]/explicar N[/cyan]      - Explicar como a critica N e validada (usa IA)\n"
             "  [cyan]/aih[/cyan]             - Colar espelho de AIH e buscar regras relevantes\n"
             "  [cyan]/aih analise[/cyan]     - Colar espelho de AIH e analisar com IA\n"
-            "  [cyan]/critica[/cyan]         - Modo validação de críticas (busca semântica)\n"
-            "  [cyan]/secoes[/cyan]          - Listar todas as seções do manual\n"
+            "  [cyan]/critica[/cyan]         - Modo validacao de criticas (busca semantica)\n"
+            "  [cyan]/secoes[/cyan]          - Listar todas as secoes do manual\n"
             "  [cyan]/fontes[/cyan]          - Listar todas as fontes indexadas\n"
-            "  [cyan]/buscar N[/cyan]        - Alterar quantidade de resultados (padrão: 5)\n"
+            "  [cyan]/buscar N[/cyan]        - Alterar quantidade de resultados (padrao: 5)\n"
             "  [cyan]sair[/cyan]             - Encerrar\n",
             title="[bold blue]Consulta Manual SIH/SUS[/bold blue]",
             border_style="blue",
@@ -714,12 +500,12 @@ def modo_interativo(model: SentenceTransformer, collection):
         if pergunta.lower().startswith("/explicar"):
             partes = pergunta.split()
             if len(partes) < 2:
-                console.print("[red]Uso: /explicar <número da crítica>[/red]")
+                console.print("[red]Uso: /explicar <numero da critica>[/red]")
                 continue
             try:
                 num = int(partes[1])
             except ValueError:
-                console.print("[red]Número inválido. Uso: /explicar 92[/red]")
+                console.print("[red]Numero invalido. Uso: /explicar 92[/red]")
                 continue
             modo_explicar_critica(num, model, collection)
             continue
@@ -746,7 +532,6 @@ def modo_interativo(model: SentenceTransformer, collection):
             table.add_column("Tipo", style="dim")
             table.add_column("Ano", style="dim")
 
-            # Agrupar por fonte com metadados do primeiro chunk
             fonte_meta = {}
             for meta in todos["metadatas"]:
                 f = meta.get("fonte", "?")
@@ -766,7 +551,6 @@ def modo_interativo(model: SentenceTransformer, collection):
             continue
 
         if pergunta.lower() == "/secoes":
-            # Buscar todas as seções únicas
             todos = collection.get(include=["metadatas"])
             secoes_vistas = {}
             for meta in todos["metadatas"]:
@@ -774,10 +558,10 @@ def modo_interativo(model: SentenceTransformer, collection):
                 if key not in secoes_vistas:
                     secoes_vistas[key] = meta
 
-            table = Table(title="Seções do Manual SIH/SUS")
-            table.add_column("Seção", style="cyan")
-            table.add_column("Título", style="white")
-            table.add_column("Página", style="dim")
+            table = Table(title="Secoes do Manual SIH/SUS")
+            table.add_column("Secao", style="cyan")
+            table.add_column("Titulo", style="white")
+            table.add_column("Pagina", style="dim")
 
             for key in sorted(
                 secoes_vistas.keys(), key=lambda x: [int(p) for p in x.split(".")]
@@ -795,7 +579,7 @@ def modo_interativo(model: SentenceTransformer, collection):
                     f"[dim]Quantidade de resultados alterada para {n_resultados}[/dim]"
                 )
             except (ValueError, IndexError):
-                console.print("[red]Uso: /buscar <número>[/red]")
+                console.print("[red]Uso: /buscar <numero>[/red]")
             continue
 
         resultados = buscar(pergunta, model, collection, n_resultados)
@@ -803,7 +587,7 @@ def modo_interativo(model: SentenceTransformer, collection):
 
 
 def consulta_unica(pergunta: str, model: SentenceTransformer, collection):
-    """Faz uma consulta e retorna (para uso programático)."""
+    """Faz uma consulta e retorna (para uso programatico)."""
     resultados = buscar(pergunta, model, collection, n_resultados=5)
     exibir_resultados(pergunta, resultados)
 
@@ -816,14 +600,12 @@ def main():
     model, collection = carregar_sistema()
 
     if len(sys.argv) > 1:
-        # Modo consulta única via linha de comando
         pergunta = " ".join(sys.argv[1:])
         consulta_unica(pergunta, model, collection)
     else:
-        # Modo interativo
         modo_interativo(model, collection)
 
-    console.print("\n[dim]Até logo![/dim]")
+    console.print("\n[dim]Ate logo![/dim]")
 
 
 if __name__ == "__main__":
