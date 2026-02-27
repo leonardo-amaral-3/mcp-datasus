@@ -1,7 +1,7 @@
 [project]
 name = "manual-sih-rag"
-version = "1.0.0"
-description = "RAG system para consulta rápida do Manual Técnico SIH/SUS"
+version = "2.1.0"
+description = "Servico de auditoria de faturamento hospitalar SIH/SUS com RAG e DATASUS"
 requires-python = ">=3.11"
 dependencies = [
     "pymupdf>=1.24.0",
@@ -14,7 +14,11 @@ dependencies = [
     "mcp[cli]>=1.0.0",
     "boto3>=1.28.0",
     "pyarrow>=14.0.0",
+    "duckdb>=1.1.0",
 ]
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.setuptools]
 py-modules = ["consulta_manual", "extrair_manual", "indexar_manual", "validar_critica", "analisar_critica", "mapear_criticas", "agente", "busca_hibrida", "avaliar_rag", "validar_resposta", "mcp_server", "s3_client", "sigtap_client", "cnes_client"]
