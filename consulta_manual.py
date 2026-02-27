@@ -44,8 +44,9 @@ CRITICA_HINTS = {
 def carregar_sistema():
     """Carrega modelo e banco vetorial (com busca híbrida se disponível)."""
     db_dir = Path(__file__).parent / "db"
+    chroma_host = os.getenv("CHROMA_HOST")
 
-    if not db_dir.exists():
+    if not chroma_host and not db_dir.exists():
         console.print(
             "[red]Erro: Banco vetorial não encontrado. Execute primeiro:[/red]"
         )

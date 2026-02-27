@@ -4,16 +4,32 @@ services:
     ports:
       - "8200:8200"
     volumes:
-      - ./db:/app/db
       - ./data:/app/data
     environment:
       S3_ENDPOINT: http://host.docker.internal:9000
       AWS_ACCESS_KEY_ID: minioadmin
       AWS_SECRET_ACCESS_KEY: minioadmin
       DATASUS_BUCKET: bucket-datasus
-      # Descomentar para usar ChromaDB remoto:
-      # CHROMA_HOST: host.docker.internal
-      # CHROMA_PORT: "8100"
+      CHROMA_HOST: chromadb
+      CHROMA_PORT: "8000"
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    depends_on:
+      chromadb:
+        condition: service_started
     restart: unless-stopped
+
+  chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8201:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+    environment:
+      ANONYMIZED_TELEMETRY: "false"
+    healthcheck:
+      disable: true
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
