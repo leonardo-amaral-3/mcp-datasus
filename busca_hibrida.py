@@ -524,9 +524,15 @@ def carregar_sistema_hibrido(
 
     # 2. ChromaDB collection
     import chromadb
+    import os as _os
 
     console.print("[dim]Conectando ao banco vetorial...[/dim]")
-    client = chromadb.PersistentClient(path=str(db_dir))
+    chroma_host = _os.getenv("CHROMA_HOST")
+    if chroma_host:
+        chroma_port = int(_os.getenv("CHROMA_PORT", "8000"))
+        client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
+    else:
+        client = chromadb.PersistentClient(path=str(db_dir))
     _collection = client.get_collection("manual_sih")
     console.print(
         f"[green]  Banco vetorial conectado: {_collection.count()} chunks.[/green]"

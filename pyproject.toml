@@ -22,3 +22,4 @@ py-modules = ["consulta_manual", "extrair_manual", "indexar_manual", "validar_cr
 [project.scripts]
 manual-sih = "consulta_manual:main"
 manual-sih-mcp = "mcp_server:main"
+manual-sih-server = "mcp_server:main_server"

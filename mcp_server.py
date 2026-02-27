@@ -22,8 +22,13 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 from mcp.server.fastmcp import FastMCP
 
+_MCP_HOST = os.getenv("MCP_HOST", "0.0.0.0")
+_MCP_PORT = int(os.getenv("MCP_PORT", "8200"))
+
 mcp = FastMCP(
     "manual-sih",
+    host=_MCP_HOST,
+    port=_MCP_PORT,
     instructions=(
         "Servidor RAG para consulta do Manual Técnico SIH/SUS, SIA/SUS e portarias. "
         "Permite busca semântica no manual, análise de críticas de validação, "
@@ -565,7 +570,22 @@ def info_cnes() -> str:
 
 
 def main():
-    mcp.run()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="MCP Server Manual SIH/SUS")
+    parser.add_argument(
+        "--transport",
+        choices=["stdio", "sse"],
+        default="stdio",
+        help="Transporte MCP (default: stdio)",
+    )
+    args = parser.parse_args()
+    mcp.run(transport=args.transport)
+
+
+def main_server():
+    """Entry point para modo SSE (servidor compartilhado)."""
+    mcp.run(transport="sse")
 
 
 if __name__ == "__main__":

@@ -70,7 +70,12 @@ def carregar_sistema():
     model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
     console.print("[dim]Conectando ao banco vetorial...[/dim]")
-    client = chromadb.PersistentClient(path=str(db_dir))
+    chroma_host = os.getenv("CHROMA_HOST")
+    if chroma_host:
+        chroma_port = int(os.getenv("CHROMA_PORT", "8000"))
+        client = chromadb.HttpClient(host=chroma_host, port=chroma_port)
+    else:
+        client = chromadb.PersistentClient(path=str(db_dir))
     collection = client.get_collection("manual_sih")
 
     console.print(
