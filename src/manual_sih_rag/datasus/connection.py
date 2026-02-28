@@ -30,12 +30,17 @@ class DuckDBConnection:
         self._conn.install_extension("httpfs")
         self._conn.load_extension("httpfs")
         endpoint = self._s3.endpoint.replace("http://", "").replace("https://", "")
-        self._conn.execute(f"SET s3_endpoint='{endpoint}'")
-        self._conn.execute(f"SET s3_access_key_id='{self._s3.access_key}'")
-        self._conn.execute(f"SET s3_secret_access_key='{self._s3.secret_key}'")
-        ssl = "true" if self._s3.use_ssl else "false"
-        self._conn.execute(f"SET s3_use_ssl={ssl}")
-        self._conn.execute("SET s3_url_style='path'")
+        use_ssl = "true" if self._s3.use_ssl else "false"
+        self._conn.execute(
+            "CREATE SECRET datasus_s3 ("
+            "  TYPE S3,"
+            f"  KEY_ID '{self._s3.access_key}',"
+            f"  SECRET '{self._s3.secret_key}',"
+            f"  ENDPOINT '{endpoint}',"
+            f"  USE_SSL {use_ssl},"
+            "  URL_STYLE 'path'"
+            ")"
+        )
         log.info("httpfs configurado para %s", self._s3.endpoint)
 
     def register_views(self) -> None:
